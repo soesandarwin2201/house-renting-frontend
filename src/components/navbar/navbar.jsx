@@ -2,7 +2,13 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div>navbar</div>
+    <>
+    <nav className="navbar">
+     <Link to ='#' className='nav-toggle'>
+          
+     </Link>
+    </nav>
+    </>
   )
 }
 
