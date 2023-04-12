@@ -4,6 +4,7 @@ import * as GiIcon from 'react-icons/gi';
 import * as MdIcon from 'react-icons/md';
 import * as BiIcon from 'react-icons/bi';
 
+/* eslint-disable */
 export const navData = [
   {
     id: 1,

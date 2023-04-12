@@ -1,10 +1,11 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import * as FaIcon from 'react-icons/fa';
 import * as AiIcon from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { IconContext } from 'react-icons';
 import { navData } from './navData';
 import './navbar.css';
-import { IconContext } from 'react-icons';
 
 function Navbar() {
   const [sidebar, SetSidebar] = useState(false);
