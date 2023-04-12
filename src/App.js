@@ -1,6 +1,12 @@
+import Navbar from "./components/navbar/navbar";
+
 function App() {
   return (
-    <h1>This is house renting app!</h1>
+    <>
+    <header>
+      <Navbar />
+    </header>
+    </>
   );
 }
 
