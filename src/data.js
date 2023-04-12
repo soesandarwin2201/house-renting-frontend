@@ -1,4 +1,5 @@
-[
+/* eslint-disable */
+const data = [
   {
     id: 1,
     name: 'The Tides At Arverne By The Sea',
