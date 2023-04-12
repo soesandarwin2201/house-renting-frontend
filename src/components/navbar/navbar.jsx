@@ -21,11 +21,15 @@ function Navbar() {
     </div>
     <nav className={sidebar ? 'nav-container active' : 'nav-container'}>
       <ul className="nav-menu" onClick={showSideBar}>
-        <li className="nav-item">
+        <li className="nav-item logo-container">
+        <Link to='/' className='logo'>
+            <span className='logo-name'>Logo</span>
+          </Link>
           <Link to='#' className='close-bar'>
             <AiIcon.AiOutlineClose />
           </Link>
         </li>
+        <div className="menu">
         {
           navData.map(item => {
             return (
@@ -38,6 +42,31 @@ function Navbar() {
             )
           })
         }
+        </div>
+
+        <div className="social-container">
+        <li className="nav-item">
+        <Link to='https://wellfound.com/u/soe-sandar-win' className='social link'>
+        <FaIcon.FaAngellist />
+          </Link>
+        </li>
+        <li className="nav-item">
+        <Link to='https://www.linkedin.com/in/soe-sandar-win-softwareengineer/' className='social link'>
+        <FaIcon.FaLinkedin />
+          </Link>
+        </li>
+        <li className="nav-item">
+        <Link to='https://github.com/soesandarwin2201' className='social link'>
+        <FaIcon.FaGithub />
+          </Link>
+        </li>
+        <li className="nav-item">
+        <Link to='https://medium.com/@soesandarwin2201' className='social link'>
+        <FaIcon.FaTwitter />
+          </Link>
+        </li>
+        <p className='copy-right'>2023 & fullstack group project</p>
+        </div>
       </ul>
 
     </nav>

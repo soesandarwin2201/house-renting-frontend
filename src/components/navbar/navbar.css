@@ -24,6 +24,21 @@
 
 .nav-menu {
      width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.logo-container {
+     margin-top: 2rem;
+     display: flex;
+     gap: 2rem;
+     align-items: center;
+}
+
+.logo-name {
+     font-size: 3rem;
+     font-style: italic;
 }
 
 .nav-item{
@@ -62,4 +77,16 @@
 
 span {
      margin-left: 12px;
+}
+
+.social-container {
+     display: flex;
+     gap: .3rem;
+     flex-wrap: wrap;
+}
+
+.copy-right {
+     font-size: .8rem;
+     text-align: center;
+     margin-bottom: 1rem;
 }
