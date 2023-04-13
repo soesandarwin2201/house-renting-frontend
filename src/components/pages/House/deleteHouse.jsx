@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import data from '../../../data';
+import { data } from '../Home/data';
 
 const DeleteHouse = () => {
   const [houses, setHouses] = useState(data);
