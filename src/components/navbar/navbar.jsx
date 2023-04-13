@@ -61,7 +61,7 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <Link to="https://medium.com/@soesandarwin2201" className="social link">
-                  <FaIcon.FaTwitter />
+                  <FaIcon.FaMedium />
                 </Link>
               </li>
               <p className="copy-right">2023 & fullstack group project</p>
