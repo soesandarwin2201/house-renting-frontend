@@ -43,7 +43,7 @@
 
 .nav-item {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 8px 0 8px 16px;
   list-style: none;
@@ -71,7 +71,7 @@
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 

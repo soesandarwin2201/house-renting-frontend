@@ -16,6 +16,14 @@ export const navData = [
   },
   {
     id: 2,
+    text: 'Reserve Form',
+    path: '/reserveform',
+    icon: <AiIcon.AiOutlineFileText />,
+    className: 'nav-item',
+    linkcss: 'nav-link',
+  },
+  {
+    id: 3,
     text: 'Reservation',
     path: '/reservation',
     icon: <AiIcon.AiOutlineFileText />,
@@ -23,7 +31,7 @@ export const navData = [
     linkcss: 'nav-link',
   },
   {
-    id: 3,
+    id: 4,
     text: 'Add house',
     path: '/addHouse',
     icon: <GiIcon.GiSpookyHouse />,
@@ -31,7 +39,7 @@ export const navData = [
     linkcss: 'nav-link',
   },
   {
-    id: 4,
+    id: 5,
     text: 'Delete House',
     path: '/deleteHouse',
     icon: <MdIcon.MdDelete />,
@@ -39,7 +47,7 @@ export const navData = [
     linkcss: 'nav-link',
   },
   {
-    id: 5,
+    id: 6,
     text: 'SignOut',
     path: '/signout',
     icon: <BiIcon.BiUserCircle />,

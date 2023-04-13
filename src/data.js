@@ -1,4 +1,3 @@
-/* eslint-disable */
 const data = [
   {
     id: 1,
@@ -49,3 +48,5 @@ const data = [
     updated_at: '2023-04-07T15:03:21.327Z',
   },
 ];
+
+export default data;
