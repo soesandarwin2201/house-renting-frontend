@@ -9,7 +9,7 @@ const Home = () => {
      <div className="home-title-container">
       <h1 className="home-title">LATEST Model Houses</h1>
       <p className='extra-text'>Chose your dream house!</p>
-      <span>...........................</span>
+      <p className='home-dot'>...........................</p>
       </div>
       <div className="card-container">
       {

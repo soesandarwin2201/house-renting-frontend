@@ -34,7 +34,7 @@
      font-size: 1rem;
 }
 
-span {
+.home-dot {
      margin-top: 1rem;
      font-size: 1.4rem;
      color: #b8b8b8;
@@ -135,11 +135,11 @@ img:hover {
 }
 
 @media screen and (max-width: 600px) {
-     .home-container {
+     /* .home-container {
           width: 100%;
           align-items: center;
           margin-inline: 5rem;
-     }
+     } */
      .card-container {
           flex-direction: column;
           align-items: center;
