@@ -36,6 +36,5 @@ export const data = [
     created_at: '2023-04-07T15:01:52.144Z',
     updated_at: '2023-04-07T15:01:52.144Z',
   },
+  
 ];
-
-
