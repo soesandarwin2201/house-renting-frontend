@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import HouseCard from './house';
 import { data } from './data';
