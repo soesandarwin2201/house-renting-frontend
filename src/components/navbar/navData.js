@@ -48,6 +48,14 @@ export const navData = [
   },
   {
     id: 6,
+    text: 'Singup',
+    path: '/registeration',
+    icon: <BiIcon.BiUserCircle />,
+    className: 'nav-item',
+    linkcss: 'nav-link',
+  },
+  {
+    id: 7,
     text: 'SignOut',
     path: '/signout',
     icon: <BiIcon.BiUserCircle />,
