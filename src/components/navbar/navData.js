@@ -54,4 +54,11 @@ export const navData = [
     className: 'nav-item',
     linkcss: 'nav-link',
   },
+  {
+    id: 7,
+    text: 'Login',
+    path: '/users',
+    icon: <BiIcon.BiUserCircle />,
+    className: 'nav-item',
+  }
 ];
