@@ -12,9 +12,9 @@ const Login = () => {
 
   const userInfo = { email, password };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    await dispatch(getAccessToken(userInfo));
+     dispatch(getAccessToken(userInfo));
     navigate('/');
   };
 
