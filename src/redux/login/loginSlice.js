@@ -59,7 +59,7 @@ const loginSlice = createSlice({
       ...state,
       isLoading: false,
       success: false,
-      error: action.payload.error.message,
+      // error: action.payload.error.message,
     }));
   },
 });

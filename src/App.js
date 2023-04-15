@@ -6,7 +6,7 @@ import AddHouse from "./pages/House/addHouse";
 import DeleteHouse from "./pages/House/deleteHouse";
 import HouseDetails from "./pages/House/houseDetails";
 import ReserveForm from "./pages/Reservation/reserveForm";
-import Signup from "./pages/Signup/signup";
+import SignUp from "./pages/Signup/signup";
 import Login from "./pages/login/login";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
             <Route path="/houseDetails" element={<HouseDetails />} />
             <Route path="/reserveform" element={<ReserveForm />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </Router>
       </header>
