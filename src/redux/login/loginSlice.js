@@ -37,6 +37,7 @@ const loginSlice = createSlice({
         success: false,
         error: '',
         token: '',
+        status: '',
       };
     },
   },
@@ -53,6 +54,7 @@ const loginSlice = createSlice({
         isLoading: false,
         success: true,
         token: action.payload.data.token,
+        status: action.payload.status,
       };
     });
     reduce.addCase(getAccessToken.rejected, (state, action) => ({

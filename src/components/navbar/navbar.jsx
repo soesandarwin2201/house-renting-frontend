@@ -10,6 +10,7 @@ import './navbar.css';
 
 function Navbar() {
   const status = useSelector((state) => state.signup.status);
+  const success = useSelector((state) => state.login.status)
   console.log(status);
   const [sidebar, SetSidebar] = useState(false);
 
@@ -18,7 +19,7 @@ function Navbar() {
   return (
     <>
     {
-      status === 200 || status === 201 ? (<IconContext.Provider value={{ color: '#000' }}>
+      status === 200 || success === 200 ? (<IconContext.Provider value={{ color: '#000' }}>
       <div className="navbar">
         <Link to="#" className="nav-toggle">
           <FaIcon.FaBars onClick={showSideBar} />
