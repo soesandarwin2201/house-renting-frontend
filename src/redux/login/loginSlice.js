@@ -20,16 +20,14 @@ export const getAccessToken = createAsyncThunk(LOGIN_USER, async (userInfo, thun
 
 const token = localStorage.getItem('token') || null;
 
-const initialState = {
-  token,
-  isLoading: false,
-  error: null,
-  success: false,
-};
-
-export const loginSlice = createSlice({
+const loginSlice = createSlice({
   name: 'login',
-  initialState,
+  initialState: {
+    token,
+    isLoading: false,
+    success: false,
+    error: '',
+  },
   reducers: {
     logout: (state) => {
       localStorage.removeItem('token');
@@ -44,26 +42,25 @@ export const loginSlice = createSlice({
   },
   extraReducers: (reduce) => {
     reduce
-      .addCase(getAccessToken.fulfilled, (state, action) => {
-       token = localStorage.setItem('token', action.payload.data.token);
-        console.log(action.payload.data)
-        return {
-          ...state,
-          isLoading: false,
-          success: true,
-          token: action.payload.data.token,
-        };
-      })
       .addCase(getAccessToken.pending, (state) => ({
         ...state,
         isLoading: true,
-      }))
-      .addCase(getAccessToken.rejected, (state, action) => ({
+      }));
+    reduce.addCase(getAccessToken.fulfilled, (state, action) => {
+      localStorage.setItem('token', action.payload.data.token);
+      return {
         ...state,
         isLoading: false,
-        success: false,
-        error: action.payload.error,
-      }));
+        success: true,
+        token: action.payload.data.token,
+      };
+    });
+    reduce.addCase(getAccessToken.rejected, (state, action) => ({
+      ...state,
+      isLoading: false,
+      success: false,
+      error: action.payload.error.message,
+    }));
   },
 });
 

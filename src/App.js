@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
-import Home from "./components/pages/Home/home";
-import SignOut from "./components/pages/SignOut/signout";
-import AddHouse from "./components/pages/House/addHouse";
-import DeleteHouse from "./components/pages/House/deleteHouse";
-import HouseDetails from "./components/pages/House/houseDetails";
-import ReserveForm from "./components/pages/Reservation/reserveForm";
-import Login from "./components/pages/login/login";
+import Home from "./pages/Home/home";
+import SignOut from "./pages/SignOut/signout";
+import AddHouse from "./pages/House/addHouse";
+import DeleteHouse from "./pages/House/deleteHouse";
+import HouseDetails from "./pages/House/houseDetails";
+import ReserveForm from "./pages/Reservation/reserveForm";
+import Signup from "./pages/Signup/signup";
+import Login from "./pages/login/login";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
             <Route path="/deleteHouse" element={<DeleteHouse />} />
             <Route path="/houseDetails" element={<HouseDetails />} />
             <Route path="/reserveform" element={<ReserveForm />} />
-            <Route path="/users" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </Router>
       </header>
