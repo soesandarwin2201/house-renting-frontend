@@ -67,7 +67,7 @@ export const removeHouse = createAsyncThunk(REMOVE_HOUSE, async (id, thunkAPI) =
     },
   };
   try {
-    return await axios.delete(`${GETHOUSES}${id}`, requestOptions);
+    return await axios.delete(`${GETHOUSES}/ + ${id}`, requestOptions);
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
   }

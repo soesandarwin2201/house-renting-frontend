@@ -15,6 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await dispatch(getAccessToken(userInfo));
+    navigate('/');
   };
 
   return (
