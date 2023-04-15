@@ -1,20 +1,12 @@
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { json } from 'react-router-dom/dist';
-
 
 const SIGNUP_USER = 'redux/singup/';
 
 const token = localStorage.getItem('token') || null;
 
-const userInfo = {
-  name: 'John Doe',
-  email: 'envkt@example.com',
-  password: '123456789',
-};
-
-const signupUser = createAsyncThunk(SIGNUP_USER, async (thunkAPI) => {
-    const API_URL = 'http://localhost:3000/users'
+export const signupUser = createAsyncThunk(SIGNUP_USER, async (userInfo, thunkAPI) => {
+  const API_URL = 'http://localhost:3000/users';
   const requestOptions = {
     method: "POST",
     headers: {
@@ -22,12 +14,7 @@ const signupUser = createAsyncThunk(SIGNUP_USER, async (thunkAPI) => {
     },
   };
   try {
-    return await axios.post(API_URL, JSON.stringify({
-        name: userInfo.name,
-        email: userInfo.email,
-        password: userInfo.password,
-  
-      }),  requestOptions);
+    return await axios.post(API_URL, JSON.stringify(userInfo), requestOptions);
   } catch (error) {
     return thunkAPI.rejectWithValue(error, "Error creating request");
   }
@@ -40,21 +27,9 @@ const initialState = {
   success: false,
 };
 
-export const signupSlice = createSlice({
+const signupSlice = createSlice({
   name: 'signup',
   initialState,
-  reducers: {
-    logout: (state) => {
-      localStorage.removeItem('token');
-      return {
-        ...state,
-        isLoading: false,
-        success: false,
-        error: '',
-        token: '',
-      };
-    },
-  },
   extraReducers(reduce) {
     reduce
       .addCase(signupUser.fulfilled, (state, action) => {
