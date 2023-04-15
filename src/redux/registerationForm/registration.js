@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
-// const BASE_URL = process.env.BASE_URL;
+import axios from 'axios';
 
 const initialState = {
      isLoading: false,
@@ -9,25 +8,19 @@ const initialState = {
      message: '',
 };
 
-export const registerData = createAsyncThunk('register/registerData', async(name,email,password, thunkAPI) => {
-     const API_URL = `http://127.0.0.1:3000/signup`;
-     const options = {
-          method: 'POST',
-          headers: {
-               'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json',
-              },
-          body: JSON.stringify({name, email, password })
-        };
-        try {
-          const response = await fetch(API_URL, options);
-          const data = await response.json();
-          console.log(data);
-          return data;
-        } catch (err) {
-          console.log(err);
-          return thunkAPI.rejectWithValue(err.message);
-        }
+export const signupUser = createAsyncThunk("signup/signupUser", async (user, thunkAPI) => {
+     const API_URL = 'http://localhost:3000/users';
+     const requestOptions = {
+       method: "POST",
+       headers: {
+         'content-type': 'application/json',
+       }
+     };
+     try {
+       return await axios.post(API_URL, JSON.stringify(user), requestOptions);
+     } catch (error) {
+       return thunkAPI.rejectWithValue(error, "Error creating request");
+     }
 });
 
 const registrationSlice = createSlice({
@@ -43,17 +36,16 @@ const registrationSlice = createSlice({
           }),
      },
      extraReducers: (builder) => {
-          builder.addCase( registerData.pending, (state) => {
+          builder.addCase(signupUser.pending, (state) => {
                state.isLoading = true;
                state.success = false;
           });
-          builder.addCase(registerData.fulfilled, (state, action) => {
+          builder.addCase(signupUser.fulfilled, (state, action) => {
                state.isLoading = false;
                state.success = true;
-               console.log(action.payload);
-               state.message = action.payload;
+               state.message = action.payload.data;
           });
-          builder.addCase(registerData.rejected, (state, action) => {
+          builder.addCase(signupUser.rejected, (state, action) => {
                state.isLoading = false;
                state.error = action.payload;
           })
