@@ -5,6 +5,33 @@ import * as MdIcon from 'react-icons/md';
 import * as BiIcon from 'react-icons/bi';
 
 /* eslint-disable */
+export const unAuthenticate = [
+  {
+    id: 1,
+    text: 'Splash',
+    path: '/splash',
+    icon: <BiIcon.BiUserCircle />,
+    className: 'nav-item',
+    linkcss: 'nav-link',
+  },
+  {
+    id: 2,
+    text: 'Signup',
+    path: '/signup',
+    icon: <BiIcon.BiUserCircle />,
+    className: 'nav-item',
+    linkcss: 'nav-link',
+  },
+  {
+    id: 3,
+    text: 'Login',
+    path: '/login',
+    icon: <BiIcon.BiUserCircle />,
+    className: 'nav-item',
+  },
+
+]
+
 export const navData = [
   {
     id: 1,

@@ -25,6 +25,7 @@ const initialState = {
   isLoading: false,
   error: null,
   success: false,
+  status: '',
 };
 
 const signupSlice = createSlice({
@@ -39,6 +40,7 @@ const signupSlice = createSlice({
           isLoading: false,
           success: true,
           token: action.payload.data.token,
+          status: action.payload.status,
         };
       })
       .addCase(signupUser.pending, (state) => ({

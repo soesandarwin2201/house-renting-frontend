@@ -8,6 +8,7 @@ import HouseDetails from "./pages/House/houseDetails";
 import ReserveForm from "./pages/Reservation/reserveForm";
 import SignUp from "./pages/Signup/signup";
 import Login from "./pages/login/login";
+import Splash from "./pages/splash/splash";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/reserveform" element={<ReserveForm />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/splash" element={<Splash />} />
           </Routes>
         </Router>
       </header>
