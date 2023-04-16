@@ -8,7 +8,6 @@ import HouseDetails from "./pages/House/houseDetails";
 import ReserveForm from "./pages/Reservation/reserveForm";
 import SignUp from "./pages/Signup/signup";
 import Login from "./pages/login/login";
-import Splash from "./pages/splash/splash";
 import ProtectedRoute from "./components/route/protectedroute";
 
 function App() {

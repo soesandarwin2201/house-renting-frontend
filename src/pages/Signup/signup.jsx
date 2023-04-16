@@ -11,10 +11,10 @@ const SignUp = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const userData = { name, email, password };
-    dispatch(signupUser({ user: userData}));
+  await   dispatch(signupUser({ user: userData}));
     navigate('/');
   };
 

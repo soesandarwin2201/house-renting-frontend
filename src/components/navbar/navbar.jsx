@@ -6,15 +6,19 @@ import * as AiIcon from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { navData , unAuthenticate} from './navData';
+import * as BiIcon from 'react-icons/bi';
 import './navbar.css';
 
 function Navbar() {
   const status = useSelector((state) => state.signup.status);
   const success = useSelector((state) => state.login.status)
-  console.log(status);
   const [sidebar, SetSidebar] = useState(false);
-
   const showSideBar = () => SetSidebar(!sidebar);
+
+  const logout = () => {
+    localStorage.removeItem('token');
+    window.location.href = '/';
+  }
 
   return (
     <>
@@ -44,8 +48,15 @@ function Navbar() {
               <span>{item.text}</span>
             </Link>
           </li>
+         
         ))
       }
+        <li className="signout-container">
+    <button onClick={() => logout()}>
+    <BiIcon.BiUserCircle />
+     <span>SignOut</span> 
+    </button>
+  </li>
           </div>
 
           <div className="social-container">
@@ -101,9 +112,11 @@ function Navbar() {
             </Link>
           </li>
         ))
+        
       }
+       
           </div>
-
+          
           <div className="social-container">
             <li className="nav-item">
               <Link to="https://wellfound.com/u/soe-sandar-win" className="social link">

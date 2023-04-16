@@ -28,19 +28,6 @@ const loginSlice = createSlice({
     success: false,
     error: '',
   },
-  reducers: {
-    logout: (state) => {
-      localStorage.removeItem('token');
-      return {
-        ...state,
-        isLoading: false,
-        success: false,
-        error: '',
-        token: '',
-        status: '',
-      };
-    },
-  },
   extraReducers: (reduce) => {
     reduce
       .addCase(getAccessToken.pending, (state) => ({
@@ -57,7 +44,7 @@ const loginSlice = createSlice({
         status: action.payload.status,
       };
     });
-    reduce.addCase(getAccessToken.rejected, (state, action) => ({
+    reduce.addCase(getAccessToken.rejected, (state) => ({
       ...state,
       isLoading: false,
       success: false,
@@ -65,7 +52,5 @@ const loginSlice = createSlice({
     }));
   },
 });
-
-export const { logout } = loginSlice.actions;
 
 export default loginSlice.reducer;
