@@ -6,18 +6,20 @@ const GET_HOUSES = "redux/houses";
 const GET_HOUSE = "redux/houses/house";
 const ADD_HOUSE = "redux/houses/house/add";
 const REMOVE_HOUSE = "redux/houses/house/remove";
-
+ 
 // show all houses
 export const fatchHouses = createAsyncThunk(GET_HOUSES, async (thunkAPI) => {
   const token = localStorage.getItem('token');
-  const requestOptions = {
+  const configuration = {
+    method: "get",
+    url: GETHOUSES,
     headers: {
-      "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-  };
+  }
   try {
-    return await axios.get(GETHOUSES, requestOptions);
+    const response = await axios(configuration);
+    return response;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
   }
@@ -42,6 +44,7 @@ export const showHouse = createAsyncThunk(GET_HOUSE, async (id, thunkAPI) => {
 // add a house
 export const addHouse = createAsyncThunk(ADD_HOUSE, async (data, thunkAPI) => {
   const token = localStorage.getItem('token');
+  
   const requestOptions = {
     method: 'POST',
     headers: {
@@ -93,7 +96,7 @@ const houseSlice = createSlice({
         ...state,
         isLoading: false,
         success: true,
-        houses: action.payload.data.data.houses,
+        houses: action.payload.data,
       }))
       .addCase(fatchHouses.pending, (state) => ({
         ...state,

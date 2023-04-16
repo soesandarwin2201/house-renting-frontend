@@ -1,10 +1,18 @@
 /* eslint-disable */
-import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import HouseCard from './house';
-import { data } from './data';
+import { fatchHouses } from '../../redux/house/houseSlice';
 import './home.css';
 
 const Home = () => {
+  const { houses } = useSelector((state) => state.houses);
+  console.log(houses)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fatchHouses());
+  }, [dispatch]);
   return (
     <section className="home-container">
      <div className="home-title-container">
@@ -14,7 +22,7 @@ const Home = () => {
       </div>
       <div className="card-container">
       {
-        data.map(house => (
+        houses.map(house => (
           <HouseCard  key={house.id} {...house} />
         ))
       }
