@@ -1,9 +1,19 @@
 import React from 'react';
 
-const SignOut = () => (
+const SignOut = () => {
+ 
+  const logout = () => {
+    localStorage.removeItem('token');
+    window.location.href = '/';
+  }
+
+  return (
   <section className="signout-container">
-    <h1>This is SignOut</h1>
+    <button onClick={() => logout()}>
+      SignOut
+    </button>
   </section>
 );
+  }
 
 export default SignOut;
