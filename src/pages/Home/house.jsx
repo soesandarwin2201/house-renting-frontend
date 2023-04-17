@@ -11,7 +11,7 @@ const HouseCard = (props) => {
 
      return ( 
       <IconContext.Provider value={{ color: '#ddd' }}>
-          <div className="house-container" onClick={() => navigate(`/houses/${house.id}`)}>
+          <div className="house-container swiper-slide" onClick={() => navigate(`/houses/${house.id}`)}>
            <div className="img-container">
                <img src={house.image} alt="house img" className='house-img'/>
            </div>
