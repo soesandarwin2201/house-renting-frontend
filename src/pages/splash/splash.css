@@ -1,0 +1,13 @@
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65vw;
+  height: 100%;
+}
+
+.logo-name {
+  text-align: center;
+  font-size: 2rem;
+}
