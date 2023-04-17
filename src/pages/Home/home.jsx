@@ -13,7 +13,6 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchHouses());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <section className="home-container">

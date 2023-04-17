@@ -10,7 +10,6 @@ const ProtectedRoute = () => {
   const token = loginToken || signupToken;
 
   if (!token || token.length <= 0) {
-   
     return <Splash />;
   }
 
