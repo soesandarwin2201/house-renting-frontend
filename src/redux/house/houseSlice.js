@@ -8,7 +8,7 @@ const ADD_HOUSE = "redux/houses/house/add";
 const REMOVE_HOUSE = "redux/houses/house/remove";
 
 // show all houses
-export const fatchHouses = createAsyncThunk(GET_HOUSES, async (thunkAPI) => {
+export const fetchHouses = createAsyncThunk(GET_HOUSES, async (thunkAPI) => {
   const token = localStorage.getItem('token');
   const requestOptions = {
     headers: {
@@ -89,18 +89,19 @@ const houseSlice = createSlice({
   extraReducers: (reduce) => {
     // show houses reducers
     reduce
-      .addCase(fatchHouses.fulfilled, (state, action) => ({
+      .addCase(fetchHouses.fulfilled, (state, action) => (
+        {
         ...state,
         isLoading: false,
         success: true,
-        houses: action.payload.data.data.houses,
+        houses: action.payload.data,
       }))
-      .addCase(fatchHouses.pending, (state) => ({
+      .addCase(fetchHouses.pending, (state) => ({
         ...state,
         isLoading: true,
         error: '',
       }))
-      .addCase(fatchHouses.rejected, (state, action) => ({
+      .addCase(fetchHouses.rejected, (state, action) => ({
         ...state,
         isLoading: false,
         success: false,
