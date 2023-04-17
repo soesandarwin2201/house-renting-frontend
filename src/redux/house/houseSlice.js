@@ -119,7 +119,7 @@ const houseSlice = createSlice({
         ...state,
         isLoading: false,
         success: true,
-        house: action.payload.data.data.houses,
+        house: action.payload.data,
       }))
       .addCase(showHouse.rejected, (state, action) => ({
         ...state,

@@ -51,6 +51,12 @@ function Navbar() {
          
         ))
       }
+       <li className="signout-container nav-item">
+    <button onClick={() => logout()}>
+    <BiIcon.BiUserCircle />
+     <span>SignOut</span> 
+    </button>
+  </li>
           </div>
 
           <div className="social-container">
