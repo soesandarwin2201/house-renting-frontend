@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Swiper, { Navigation } from 'swiper';
+import 'swiper/swiper-bundle.css';
 import HouseCard from './house';
 import { fetchHouses } from '../../redux/house/houseSlice';
 import './home.css';
-import Swiper, { Navigation } from 'swiper';
-import 'swiper/swiper-bundle.css';
 
 Swiper.use([Navigation]); // add the Navigation module to Swiper
 
@@ -15,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchHouses());
-  
+
     // Create Swiper instance when component mounts
     swiperRef.current = new Swiper('.swiper-container', {
       slidesPerView: 3,
@@ -29,7 +30,7 @@ const Home = () => {
         prevEl: '.swiper-button-prev',
       },
     });
-  
+
     // Destroy Swiper instance when component unmounts
     return () => {
       if (swiperRef.current) {
@@ -37,13 +38,13 @@ const Home = () => {
       }
     };
   }, [dispatch]);
-  
+
   return (
     <section className="home-container">
       <div className="home-title-container">
         <h1 className="home-title">LATEST Model Houses</h1>
-        <p className='extra-text'>Choose your dream house!</p>
-        <p className='home-dot'>...........................</p>
+        <p className="extra-text">Choose your dream house!</p>
+        <p className="home-dot">...........................</p>
       </div>
       <div className="swiper-container">
         <div className="swiper-wrapper">
@@ -53,9 +54,9 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
+        <div className="swiper-pagination" />
+        <div className="swiper-button-next" />
+        <div className="swiper-button-prev" />
       </div>
     </section>
   );
