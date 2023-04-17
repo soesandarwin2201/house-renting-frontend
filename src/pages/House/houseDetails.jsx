@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { data } from "../Home/data";
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { showHouse } from "../../redux/house/houseSlice";
+
 
 function HouseDetails() {
+  const { id } = useParams();
+ const dispatch = useDispatch()
+
+
+
+ useEffect =  () => {
+ dispatch(showHouse(id))
+ }
+
   return (
     <div>
-      <>
+   
         <h1>House Details</h1>
-        {data.map((house) => (
           <>
             <div key={house.id}>
-              <p>{house.id}</p>
               <p>{house.name}</p>
               <img
                 src={house.image}
@@ -22,8 +33,7 @@ function HouseDetails() {
             </div>
             <button type="button">Reserve</button>
           </>
-        ))}
-      </>
+  
     </div>
   );
 }

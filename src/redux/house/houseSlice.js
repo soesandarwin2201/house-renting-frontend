@@ -27,13 +27,14 @@ export const fatchHouses = createAsyncThunk(GET_HOUSES, async (thunkAPI) => {
 export const showHouse = createAsyncThunk(GET_HOUSE, async (id, thunkAPI) => {
   const token = localStorage.getItem('token');
   const requestOptions = {
+    method: "get",
     headers: {
-      "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
+    timeout: 10000
   };
   try {
-    return await axios.get(`${GETHOUSES}${id}`, requestOptions);
+    return await axios.get(`${GETHOUSES}/${id}`, requestOptions);
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
   }
@@ -78,7 +79,7 @@ const initialState = {
   isLoading: false,
   success: false,
   error: '',
-  house: null,
+  house: {},
   response: null,
 };
 
@@ -118,7 +119,7 @@ const houseSlice = createSlice({
         ...state,
         isLoading: false,
         success: true,
-        house: action.payload.data.data.houses,
+        house: action.payload.data,
       }))
       .addCase(showHouse.rejected, (state, action) => ({
         ...state,

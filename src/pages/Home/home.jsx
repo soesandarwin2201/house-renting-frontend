@@ -5,6 +5,14 @@ import { data } from './data';
 import './home.css';
 
 const Home = () => {
+
+  const { houses } = useSelector((state) => state.houses);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fatchHouses());
+  }, [dispatch]);
+
   return (
     <section className="home-container">
      <div className="home-title-container">
@@ -14,8 +22,10 @@ const Home = () => {
       </div>
       <div className="card-container">
       {
-        data.map(house => (
-          <HouseCard  key={house.id} {...house} />
+
+        houses.map(house => (
+          <HouseCard  {...house} />
+
         ))
       }
       </div>

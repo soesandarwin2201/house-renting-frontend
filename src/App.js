@@ -20,10 +20,11 @@ function App() {
         <Route path="/signout" element={<SignOut />} />
         <Route path="/" element={<ProtectedRoute />}>
           <Route exact path="/" element={<Home />} />
+          
           <Route path="/addHouse" element={<AddHouse />} />
           <Route path="/deleteHouse" element={<DeleteHouse />} />
-          <Route path="/houseDetails" element={<HouseDetails />} />
           <Route path="/reserveform" element={<ReserveForm />} />
+          <Route exact path="houses/:id" element={<HouseDetails />} />
         </Route>
       </Routes>
     </Router>
