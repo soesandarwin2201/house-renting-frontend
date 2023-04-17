@@ -8,7 +8,7 @@ const DeleteHouse = () => {
 
   useEffect(() => {
     // Fetch API data and update the state of houses
-    const token = localStorage.getItem('token'); // Replace with your actual authentication token
+    const token = localStorage.getItem("token"); // Replace with your actual authentication token
     fetch("http://localhost:3000/houses", {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -21,8 +21,7 @@ const DeleteHouse = () => {
         }
         return response.json();
       })
-      .then((data) => setHouses(data))
-      .catch((error) => console.error(error));
+      .then((data) => setHouses(data));
   }, []);
 
   const handleDelete = (id) => {
