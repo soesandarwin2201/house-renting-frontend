@@ -37,8 +37,10 @@ export const addReservation = createAsyncThunk(ADD_RESERVATION, async (data, thu
   }
 });
 
-export const addReservedHouse = createAsyncThunk(ADD_HOUSE_RESERVED, async (id, data, thunkApi) => {
+export const addReservedHouse = createAsyncThunk(ADD_HOUSE_RESERVED, async ( reservation ,  thunkApi) => {
   const token = localStorage.getItem('token');
+  const { house_id } = reservation;
+  console.log("hello")
   const requestOptions = {
     method: 'POST',
     headers: {
@@ -47,7 +49,9 @@ export const addReservedHouse = createAsyncThunk(ADD_HOUSE_RESERVED, async (id, 
     },
   };
   try {
-    return await axios.post(`${GETHOUSES}/${id}/reservations`, data, requestOptions);
+    const response = await axios.post(`${GETHOUSES}/${house_id}/reservations`, reservation, requestOptions);
+    console.log('THIS IS IT'+ response)
+    return response;
   } catch (e) {
     return thunkApi.rejectWithValue(e.response.data.error);
   }
@@ -77,7 +81,7 @@ const reservationSlice = createSlice({
       ...state,
       isLoading: false,
       success: true,
-      list: action.payload.data.data.reservations,
+      list: action.payload.data,
     }));
 
     builder.addCase(fatchReservation.rejected, (state, action) => ({
@@ -98,13 +102,13 @@ const reservationSlice = createSlice({
       ...state,
       isLoading: false,
       success: true,
-      response: action.payload.data.data,
+      response: action.payload.data,
     }));
 
     builder.addCase(addReservation.rejected, (state, action) => ({
       ...state,
       isLoading: false,
-      errors: action.payload.data.errors,
+      errors: action.error.message,
     }));
 
     // Add reservation from house
@@ -119,13 +123,13 @@ const reservationSlice = createSlice({
       ...state,
       isLoading: false,
       success: true,
-      response: action.payload.data.data,
+      response: action.payload.data,
     }));
 
     builder.addCase(addReservedHouse.rejected, (state, action) => ({
       ...state,
       isLoading: false,
-      errors: action.payload.data.errors,
+      errors: action.error.message,
     }));
   },
 });
