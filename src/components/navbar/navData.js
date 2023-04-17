@@ -8,14 +8,6 @@ import * as BiIcon from 'react-icons/bi';
 export const unAuthenticate = [
   {
     id: 1,
-    text: 'Splash',
-    path: '/splash',
-    icon: <BiIcon.BiUserCircle />,
-    className: 'nav-item',
-    linkcss: 'nav-link',
-  },
-  {
-    id: 2,
     text: 'Signup',
     path: '/signup',
     icon: <BiIcon.BiUserCircle />,
@@ -23,14 +15,15 @@ export const unAuthenticate = [
     linkcss: 'nav-link',
   },
   {
-    id: 3,
+    id: 2,
     text: 'Login',
     path: '/login',
     icon: <BiIcon.BiUserCircle />,
     className: 'nav-item',
+    linkcss: 'nav-link',
   },
 
-]
+];
 
 export const navData = [
   {
@@ -81,5 +74,4 @@ export const navData = [
     className: 'nav-item',
     linkcss: 'nav-link',
   },
-
 ];

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
-import Home from './pages/Home/home'
+import Home from './pages/Home/home';
 import SignOut from "./pages/SignOut/signout";
 import AddHouse from "./pages/House/addHouse";
 import DeleteHouse from "./pages/House/deleteHouse";
@@ -8,7 +8,6 @@ import HouseDetails from "./pages/House/houseDetails";
 import ReserveForm from "./pages/Reservation/reserveForm";
 import SignUp from "./pages/Signup/signup";
 import Login from "./pages/login/login";
-import Splash from "./pages/splash/splash";
 import ProtectedRoute from "./components/route/protectedroute";
 
 function App() {

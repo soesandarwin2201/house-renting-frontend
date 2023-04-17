@@ -4,11 +4,11 @@ import { useDispatch } from 'react-redux';
 import { getAccessToken } from '../../redux/login/loginSlice';
 
 const Login = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const userInfo = { email, password };
 
