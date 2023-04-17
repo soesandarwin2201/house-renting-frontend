@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import HouseCard from './house';
 import { fetchHouses } from '../../redux/house/houseSlice';
-import { data } from './data';
 import './home.css';
 import Swiper, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
