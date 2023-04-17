@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
-import Home from "./pages/Home/home";
+import Home from './pages/Home/home';
 import SignOut from "./pages/SignOut/signout";
 import AddHouse from "./pages/House/addHouse";
 import DeleteHouse from "./pages/House/deleteHouse";
@@ -20,7 +20,6 @@ function App() {
         <Route path="/signout" element={<SignOut />} />
         <Route path="/" element={<ProtectedRoute />}>
           <Route exact path="/" element={<Home />} />
-          
           <Route path="/addHouse" element={<AddHouse />} />
           <Route path="/deleteHouse" element={<DeleteHouse />} />
           <Route path="/reserveform" element={<ReserveForm />} />
