@@ -27,3 +27,12 @@ useEffect(() => {
     })
     .then((data) => setHouse(data));
 }, []);
+
+const handleSubmit = (id) => {
+  // Dispatch the removeHouse action with the id
+  dispatch(addReservation(id));
+
+  // Update the state by filtering out the deleted house
+  const updatedHouses = house.filter((house) => house.id !== id);
+  setHouse(updatedHouses);
+};
