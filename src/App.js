@@ -20,7 +20,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signout" element={<SignOut />} />
         <Route path="/" element={<ProtectedRoute />}>
-          <Route exact path="/home" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/addHouse" element={<AddHouse />} />
           <Route path="/deleteHouse" element={<DeleteHouse />} />
           <Route path="/houseDetails" element={<HouseDetails />} />
