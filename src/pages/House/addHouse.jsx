@@ -1,11 +1,18 @@
 import { useState } from "react";
-// import { useDispatch } from 'react-redux';
-// import { addBook } from '../Redux/books/books';
+import { useDispatch } from "react-redux";
+import { addHouse } from "../../redux/house/houseSlice"; // Import the action to add a house
 
 const AddHouse = () => {
-  const [house, setHouse] = useState({});
+  const [house, setHouse] = useState({
+    name: "",
+    image: "",
+    price: "",
+    location: "",
+    description: "",
+    bedroom_number: "",
+  });
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const inputValue = (e) => {
     setHouse({
@@ -14,56 +21,56 @@ const AddHouse = () => {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addHouse(house)); // Dispatch the addHouse action with the house data
+    e.target.reset();
+  };
+
   return (
     <div className="form-container">
       <h3 className="add-book-title">ADD NEW HOUSE</h3>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          // dispatch(addHouse(house));
-          e.target.reset();
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
           placeholder="house name"
-          onChange={(e) => inputValue(e)}
+          onChange={inputValue}
           required
         />
         <input
           type="string"
           name="image"
           placeholder="image"
-          onChange={(e) => inputValue(e)}
+          onChange={inputValue}
           required
         />
         <input
           type="decimal"
           name="price"
           placeholder="price"
-          onChange={(e) => inputValue(e)}
+          onChange={inputValue}
           required
         />
         <input
           type="text"
           name="location"
           placeholder="location"
-          onChange={(e) => inputValue(e)}
+          onChange={inputValue}
           required
         />
         <input
           type="text"
           name="description"
           placeholder="description"
-          onChange={(e) => inputValue(e)}
+          onChange={inputValue}
           required
         />
         <input
           type="integer"
           name="bedroom_number"
           placeholder="bedroom number"
-          onChange={(e) => inputValue(e)}
+          onChange={inputValue}
           required
         />
         <button type="submit">Add House</button>
