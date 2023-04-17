@@ -33,7 +33,7 @@ export const showHouse = createAsyncThunk(GET_HOUSE, async (id, thunkAPI) => {
     },
   };
   try {
-    return await axios.get(`${GETHOUSES}${id}`, requestOptions);
+    return await axios.get(`${GETHOUSES}/${id}`, requestOptions);
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
   }
@@ -115,12 +115,14 @@ const houseSlice = createSlice({
         isLoading: true,
         error: '',
       }))
-      .addCase(showHouse.fulfilled, (state, action) => ({
+      .addCase(showHouse.fulfilled, (state, action) => {
+        return {
         ...state,
         isLoading: false,
         success: true,
         house: action.payload.data,
-      }))
+        }
+      })
       .addCase(showHouse.rejected, (state, action) => ({
         ...state,
         isLoading: false,
