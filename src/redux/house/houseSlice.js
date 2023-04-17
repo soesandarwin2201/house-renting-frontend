@@ -91,11 +91,11 @@ const houseSlice = createSlice({
     reduce
       .addCase(fetchHouses.fulfilled, (state, action) => (
         {
-        ...state,
-        isLoading: false,
-        success: true,
-        houses: action.payload.data,
-      }))
+          ...state,
+          isLoading: false,
+          success: true,
+          houses: action.payload.data,
+        }))
       .addCase(fetchHouses.pending, (state) => ({
         ...state,
         isLoading: true,
