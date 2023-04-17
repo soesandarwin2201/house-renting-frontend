@@ -1,15 +1,16 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { useNavigate, useParams } from "react-router";
 import { addReservedHouse } from "../../redux/reservation/reservationSlice";
 
 const HomeReserve = () => {
-    const { id } = useParams()
+  const { id } = useParams();
   const [reservation, setReservation] = useState({
     start_date: "",
     end_date: "",
-    house_id: id
+    house_id: id,
   });
 
   const inputValue = (e) => {
@@ -19,15 +20,13 @@ const HomeReserve = () => {
     });
   };
 
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
-    console.log(reservation)
-     dispatch(addReservedHouse( reservation ))
-     navigate("/reservations");
+    e.preventDefault();
+    dispatch(addReservedHouse(reservation));
+    navigate("/reservations");
   };
 
   return (
