@@ -15,7 +15,7 @@ const SignUp = () => {
     e.preventDefault();
     const userData = { name, email, password };
     dispatch(signupUser({ user: userData}));
-    navigate('/');
+    navigate('/home');
   };
 
   return (

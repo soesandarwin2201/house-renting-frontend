@@ -36,7 +36,7 @@ export const navData = [
   {
     id: 1,
     text: 'Home',
-    path: '/',
+    path: '/home',
     icon: <AiIcon.AiFillHome />,
     className: 'nav-item',
     linkcss: 'nav-link',
