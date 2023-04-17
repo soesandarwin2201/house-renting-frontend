@@ -1,15 +1,17 @@
 /* eslint-disable */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import * as FaIcon from 'react-icons/fa';
 import './home.css';
 
 const HouseCard = (props) => {
   const house = props;
+  const navigate = useNavigate();
+
      return ( 
       <IconContext.Provider value={{ color: '#ddd' }}>
-          <div className="house-container">
+          <div className="house-container swiper-slide" onClick={() => navigate(`/houses/${house.id}`)}>
            <div className="img-container">
                <img src={house.image} alt="house img" className='house-img'/>
            </div>
