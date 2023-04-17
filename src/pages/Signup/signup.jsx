@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { signupUser } from '../../redux/signup/signupSlice';
 
 const SignUp = () => {
@@ -14,7 +14,7 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const userData = { name, email, password };
-    dispatch(signupUser({ user: userData}));
+    dispatch(signupUser({ user: userData }));
     navigate('/home');
   };
 
@@ -49,7 +49,7 @@ const SignUp = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button className="signup-btn" onClick={handleSubmit}>
+        <button type="button" className="signup-btn" onClick={handleSubmit}>
           SignUp
         </button>
       </form>
