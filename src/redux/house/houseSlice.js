@@ -115,14 +115,12 @@ const houseSlice = createSlice({
         isLoading: true,
         error: '',
       }))
-      .addCase(showHouse.fulfilled, (state, action) => {
-        return {
+      .addCase(showHouse.fulfilled, (state, action) => ({
         ...state,
         isLoading: false,
         success: true,
         house: action.payload.data,
-        }
-      })
+      }))
       .addCase(showHouse.rejected, (state, action) => ({
         ...state,
         isLoading: false,

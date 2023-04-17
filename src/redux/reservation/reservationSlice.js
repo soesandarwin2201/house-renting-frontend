@@ -37,25 +37,24 @@ export const addReservation = createAsyncThunk(ADD_RESERVATION, async (data, thu
   }
 });
 
-export const addReservedHouse = createAsyncThunk(ADD_HOUSE_RESERVED, async ( reservation ,  thunkApi) => {
-  const token = localStorage.getItem('token');
-  const { house_id } = reservation;
-  console.log("hello")
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-  };
-  try {
-    const response = await axios.post(`${GETHOUSES}/${house_id}/reservations`, reservation, requestOptions);
-    console.log('THIS IS IT'+ response)
-    return response;
-  } catch (e) {
-    return thunkApi.rejectWithValue(e.response.data.error);
-  }
-});
+export const addReservedHouse = createAsyncThunk(ADD_HOUSE_RESERVED,
+  async (reservation, thunkApi) => {
+    const token = localStorage.getItem('token');
+    const { house_id: id } = reservation;
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    try {
+      const response = await axios.post(`${GETHOUSES}/${id}/reservations`, reservation, requestOptions);
+      return response;
+    } catch (e) {
+      return thunkApi.rejectWithValue(e.response.data.error);
+    }
+  });
 
 const initialState = {
   isLoading: false,
