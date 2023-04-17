@@ -1,13 +1,36 @@
-import React, { useState } from 'react';
-import { data } from '../Home/data';
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { removeHouse } from "../../redux/house/houseSlice";
 
 const DeleteHouse = () => {
-  const [houses, setHouses] = useState(data);
+  const [houses, setHouses] = useState([]);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch API data and update the state of houses
+    const token = localStorage.getItem('token'); // Replace with your actual authentication token
+    fetch("http://localhost:3000/houses", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => setHouses(data))
+      .catch((error) => console.error(error));
+  }, []);
 
   const handleDelete = (id) => {
-    // Filter out the house with the given id
+    // Dispatch the removeHouse action with the id
+    dispatch(removeHouse(id));
+
+    // Update the state by filtering out the deleted house
     const updatedHouses = houses.filter((house) => house.id !== id);
-    // Update state with the filtered houses
     setHouses(updatedHouses);
   };
 
@@ -18,7 +41,9 @@ const DeleteHouse = () => {
         {houses.map((house) => (
           <li key={house.id}>
             {house.name}
-            <button type="button" onClick={() => handleDelete(house.id)}>Delete</button>
+            <button type="button" onClick={() => handleDelete(house.id)}>
+              Delete
+            </button>
           </li>
         ))}
       </ul>
