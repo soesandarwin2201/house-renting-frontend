@@ -33,7 +33,7 @@ export const showHouse = createAsyncThunk(GET_HOUSE, async (id, thunkAPI) => {
     },
   };
   try {
-    return await axios.get(`${GETHOUSES}${id}`, requestOptions);
+    return await axios.get(`${GETHOUSES}/${id}`, requestOptions);
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
   }

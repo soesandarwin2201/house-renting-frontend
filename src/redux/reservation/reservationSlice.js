@@ -37,21 +37,24 @@ export const addReservation = createAsyncThunk(ADD_RESERVATION, async (data, thu
   }
 });
 
-export const addReservedHouse = createAsyncThunk(ADD_HOUSE_RESERVED, async (id, data, thunkApi) => {
-  const token = localStorage.getItem('token');
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-  };
-  try {
-    return await axios.post(`${GETHOUSES}/${id}/reservations`, data, requestOptions);
-  } catch (e) {
-    return thunkApi.rejectWithValue(e.response.data.error);
-  }
-});
+export const addReservedHouse = createAsyncThunk(ADD_HOUSE_RESERVED,
+  async (reservation, thunkApi) => {
+    const token = localStorage.getItem('token');
+    const { house_id: id } = reservation;
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    try {
+      const response = await axios.post(`${GETHOUSES}/${id}/reservations`, reservation, requestOptions);
+      return response;
+    } catch (e) {
+      return thunkApi.rejectWithValue(e.response.data.error);
+    }
+  });
 
 const initialState = {
   isLoading: false,
@@ -77,7 +80,7 @@ const reservationSlice = createSlice({
       ...state,
       isLoading: false,
       success: true,
-      list: action.payload.data.data.reservations,
+      list: action.payload.data,
     }));
 
     builder.addCase(fatchReservation.rejected, (state, action) => ({
@@ -98,13 +101,13 @@ const reservationSlice = createSlice({
       ...state,
       isLoading: false,
       success: true,
-      response: action.payload.data.data,
+      response: action.payload.data,
     }));
 
     builder.addCase(addReservation.rejected, (state, action) => ({
       ...state,
       isLoading: false,
-      errors: action.payload.data.errors,
+      errors: action.error.message,
     }));
 
     // Add reservation from house
@@ -119,13 +122,13 @@ const reservationSlice = createSlice({
       ...state,
       isLoading: false,
       success: true,
-      response: action.payload.data.data,
+      response: action.payload.data,
     }));
 
     builder.addCase(addReservedHouse.rejected, (state, action) => ({
       ...state,
       isLoading: false,
-      errors: action.payload.data.errors,
+      errors: action.error.message,
     }));
   },
 });
