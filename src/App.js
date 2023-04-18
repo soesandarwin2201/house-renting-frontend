@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar/navbar";
+// eslint-disable-next-line import/no-named-as-default-member
+import Navbar from './components/navbar/navbar';
 import Home from './pages/Home/home';
 import SignOut from "./pages/SignOut/signout";
 import AddHouse from "./pages/House/addHouse";
