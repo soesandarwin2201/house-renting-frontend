@@ -74,7 +74,9 @@
 ## Kanban Board <a name="kanban-board"></a>
 
 - [Kanban-Board](https://github.com/users/soesandarwin2201/projects/7)
-- [Kanban-Board initial screenshot](C:\Users\atdie\OneDrive\Pictures\Screenshots\Screenshot (269).png)
+- [Kanban-Board initial screenshot](![Screenshot (269)])
+![Screenshot (269)](https://user-images.githubusercontent.com/47176316/232759201-105d6a93-2b9f-476f-a9c2-b9f16f64e62f.png)
+
 - At the end of this project, we are still 5 members: @soesandarwin2201, @anyepeter, @TechnoAndy, @Alabi12, and @studiosnabeel. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
