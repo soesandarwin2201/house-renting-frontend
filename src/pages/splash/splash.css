@@ -49,3 +49,19 @@ body {
   align-items: center;
   color: white;
 }
+
+.searchIcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: fixed;
+  right: 30px;
+  top: 2rem;
+  font-size: 40px;
+  color: white;
+  width: 100%;
+}
+
+.FaIcon .FaBars {
+  color: white;
+}
