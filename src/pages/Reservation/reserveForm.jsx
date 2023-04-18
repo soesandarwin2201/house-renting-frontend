@@ -24,7 +24,7 @@ const ReserveForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
+      <label className="reservation-form">
         Start Date:
         <input
           type="date"
