@@ -28,7 +28,6 @@ const ReserveForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(reservation);
     dispatch(addReservation(reservation));
     navigate('/reservations');
   };
