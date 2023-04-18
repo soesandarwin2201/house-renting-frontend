@@ -57,9 +57,4 @@ button {
     width: 50%;
     margin: auto;
   }
-
-  .reservation-form {
-    display: flex;
-    justify-content: center;
-  }
 }
