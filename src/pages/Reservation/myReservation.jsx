@@ -1,40 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { addReservation } from '../../redux/reservation/reservationSlice';
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addReservation } from "../../redux/reservation/reservationSlice";
 
 const ReserveHouse = () => {
   const [house, setHouse] = useState({
-    start_date: '',
-    end_date: '',
+    startDate: "",
+    endDate: "",
   });
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-  // Fetch API data and update the state of houses
-    const token = localStorage.getItem('token'); // Replace with your actual authentication token
-    fetch('http://localhost:3000/houses', {
+    // Fetch API data and update the state of houses
+    const token = localStorage.getItem("token"); // Replace with your actual authentication token
+    fetch("http://localhost:3000/houses", {
       headers: {
         Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         return response.json();
       })
       .then((data) => setHouse(data));
   }, []);
 
-  const handleSubmit = (id) => {
-  // Dispatch the removeHouse action with the id
-    dispatch(addReservation(id));
+  const handleStartDateChange = (event) => {
+    setHouse({
+      ...house,
+      startDate: event.target.value,
+    });
+  };
 
-    // Update the state by filtering out the deleted house
-    const updatedHouses = house.filter((house) => house.id !== id);
-    setHouse(updatedHouses);
+  const handleEndDateChange = (event) => {
+    setHouse({
+      ...house,
+      endDate: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Dispatch the addReservation action with the reservation data
+    dispatch(addReservation(house));
+
+    // Clear the form after submission
+    setHouse({
+      startDate: "",
+      endDate: "",
+    });
   };
 
   return (
@@ -43,7 +62,7 @@ const ReserveHouse = () => {
         Start Date:
         <input
           type="date"
-          value={startDate}
+          value={house.startDate}
           onChange={handleStartDateChange}
           required
         />
@@ -52,7 +71,7 @@ const ReserveHouse = () => {
         End Date:
         <input
           type="date"
-          value={endDate}
+          value={house.endDate}
           onChange={handleEndDateChange}
           required
         />
