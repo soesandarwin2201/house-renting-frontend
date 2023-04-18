@@ -181,7 +181,7 @@ img:hover {
 .swiper-button-prev {
   position: absolute;
   top: 76%;
-  transform: translateX(342%);
+  transform: translateX(332%);
   width: auto;
   margin: 0 auto;
   height: 10px;
