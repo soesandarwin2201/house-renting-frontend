@@ -94,7 +94,7 @@ img:hover {
 
 .house-name {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #040406;
 }
@@ -137,7 +137,7 @@ img:hover {
 }
 
 .swiper-container {
-  width: 80%;
+  width: 93%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -153,10 +153,9 @@ img:hover {
   align-items: center;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-button-next {
   position: absolute;
-  top: 70%;
+  top: 78%;
   transform: translateY(-50%);
   width: auto;
   margin: 0 auto;
@@ -171,6 +170,37 @@ img:hover {
   z-index: 10;
   cursor: pointer;
   padding: 1.5rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 0;
+  justify-content: flex-start;
+  right: 0;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 76%;
+  transform: translateX(145%);
+  width: auto;
+  margin: 0 auto;
+  height: 10px;
+  background-color: #98c10f;
+  border-radius: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.5rem;
+  z-index: 10;
+  cursor: pointer;
+  padding: 1.5rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 0;
+  justify-content: flex-start;
+  left: 0;
 }
 
 @media screen and (max-width: 600px) {
