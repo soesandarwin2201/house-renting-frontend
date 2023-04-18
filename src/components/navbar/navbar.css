@@ -83,6 +83,7 @@ span {
   display: flex;
   gap: 0.3rem;
   flex-wrap: wrap;
+  padding-left: 0.5rem;
 }
 
 .copy-right {
