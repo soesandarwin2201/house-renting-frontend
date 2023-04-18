@@ -1,3 +1,9 @@
+body html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -65,5 +71,9 @@ button {
 
   .reserve-input {
     width: 100%;
+  }
+
+  body {
+    height: 100vh;
   }
 }
