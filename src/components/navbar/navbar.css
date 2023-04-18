@@ -43,8 +43,11 @@
 }
 
 .logo-name {
-  font-size: 3rem;
-  font-style: italic;
+  color: #241b1b;
+  font-family: Dr Sugiyama,cursive;
+  text-align: center;
+  text-decoration: underline;
+  transform: rotate(-20deg);
 }
 
 .nav-item {
