@@ -74,6 +74,26 @@ body {
 
 @media only screen and (max-width: 897px) {
   .logo-name {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 678px) {
+  .logo-name {
+    letter-spacing: 6px;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .logo-name {
+    letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .logo-name {
+    font-weight: 900;
+    letter-spacing: 6px;
     font-size: 1rem;
   }
 }
