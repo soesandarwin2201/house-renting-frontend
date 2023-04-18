@@ -65,3 +65,15 @@ body {
 .FaIcon .FaBars {
   color: white;
 }
+
+@media only screen and (max-width: 1080px) {
+  .logo-name {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 897px) {
+  .logo-name {
+    font-size: 1rem;
+  }
+}
