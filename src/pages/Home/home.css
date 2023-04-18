@@ -181,7 +181,7 @@ img:hover {
 .swiper-button-prev {
   position: absolute;
   top: 76%;
-  transform: translateX(145%);
+  transform: translateX(243%);
   width: auto;
   margin: 0 auto;
   height: 10px;
@@ -195,11 +195,10 @@ img:hover {
   z-index: 10;
   cursor: pointer;
   padding: 1.5rem;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 0;
-  justify-content: flex-start;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 40px;
   left: 0;
 }
 
