@@ -18,4 +18,11 @@ const ReserveForm = () => {
   }, [dispatch]);
 };
 
+const inputValue = (e) => {
+  setReservation({
+    ...reservation,
+    [e.target.name]: e.target.value,
+  });
+};
+
 export default ReserveForm;
