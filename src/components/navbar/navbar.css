@@ -90,13 +90,17 @@ span {
 
 .social-container {
   display: flex;
-  gap: 0.3rem;
-  flex-wrap: wrap;
+  gap: 0.1rem;
   padding-left: 0.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.social-container li:hover {
+  transform: rotate(45deg);
 }
 
 .copy-right {
   font-size: 0.8rem;
   text-align: center;
-  margin-bottom: 1rem;
 }

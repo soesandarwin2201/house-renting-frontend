@@ -75,7 +75,6 @@ function Navbar() {
                 <FaIcon.FaMedium />
               </Link>
             </li>
-            <p className="copy-right">2023 & fullstack group project</p>
           </div>
         </ul>
 
@@ -133,7 +132,6 @@ function Navbar() {
                 <FaIcon.FaMedium />
               </Link>
             </li>
-            <p className="copy-right">2023 & fullstack group project</p>
           </div>
         </ul>
 
