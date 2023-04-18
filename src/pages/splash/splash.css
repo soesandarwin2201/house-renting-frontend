@@ -1,13 +1,11 @@
-.splash-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 65vw;
-  height: 100%;
-}
-
-.logo-name {
-  text-align: center;
-  font-size: 2rem;
+body {
+  width: 100%;
+  background-image: url(../../../public/Home.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
