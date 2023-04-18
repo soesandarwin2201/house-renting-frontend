@@ -8,7 +8,7 @@
 
 .nav-container {
   background-color: #fff;
-  width: 180px;
+  width: 250px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -60,19 +60,20 @@
  background-color: #98c10f;
  color: white;
  font-weight: bold;
- font-size: 0.9rem;
+ font-size: 1.1rem;
 }
 
 .nav-link {
   text-decoration: none;
   color: #000;
-  font-size: 1rem;
+  font-size: 1.3rem;
   width: 95%;
   height: 100%;
   display: flex;
   align-items: center;
   padding: 15px 18px;
   border-radius: 4px;
+  font-weight: bold;
 }
 
 .close-bar {
