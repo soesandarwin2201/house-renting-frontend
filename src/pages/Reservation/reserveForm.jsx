@@ -27,9 +27,44 @@ const inputValue = (e) => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  console.log(reservation)
+  console.log(reservation);
   dispatch(addReservation(reservation));
-   navigate("/reservations");
+  navigate('/reservations');
 };
+
+return (
+  <form onSubmit={handleSubmit}>
+    <label>
+      Start Date:
+      <input
+        type="date"
+        name="start_date"
+        onChange={inputValue}
+       
+        required
+      />
+    </label>
+    <label>
+      End Date:
+      <input
+        type="date"
+        name="end_date"
+        onChange={inputValue}
+       
+        required
+      />
+    </label>
+
+    <label for="cars">Choose a house:</label>
+<select id="cars" name="house_id" onChange={inputValue} form="carform">
+{
+   houses.map((house) => {
+    return(
+      <option key={house.id} value={house.id}>
+        {house.name}
+      </option>
+    )
+   })
+}
 
 export default ReserveForm;
