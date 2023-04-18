@@ -10,8 +10,8 @@ import * as BiIcon from 'react-icons/bi';
 import './navbar.css';
 
 function Navbar() {
-  const status = useSelector((state) => state.signup.status);
-  const success = useSelector((state) => state.login.status)
+  const status = useSelector((state) => state.signup.token);
+  const success = useSelector((state) => state.login.token)
   const [sidebar, SetSidebar] = useState(false);
   const showSideBar = () => SetSidebar(!sidebar);
 
@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <>
     {
-      status === 200 || success === 200 ? (<IconContext.Provider value={{ color: '#000' }}>
+      status || success ? (<IconContext.Provider value={{ color: '#000' }}>
       <div className="navbar">
         <Link to="#" className="nav-toggle">
           <FaIcon.FaBars onClick={showSideBar} />
