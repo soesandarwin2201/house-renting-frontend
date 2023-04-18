@@ -64,7 +64,6 @@ button {
   }
 
   .reserve-input {
-    display: flex;
     width: 100%;
   }
 }
