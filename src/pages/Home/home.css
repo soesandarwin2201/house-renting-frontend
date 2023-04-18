@@ -68,11 +68,11 @@
 }
 
 img {
-  width: 200px;
+  width: 280px;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  height: 200px;
+  height: 280px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset, rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
   transition: 1s ease;
 }
@@ -137,7 +137,7 @@ img:hover {
 }
 
 .swiper-container {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -156,21 +156,21 @@ img:hover {
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
-  top: 10%;
+  top: 70%;
   transform: translateY(-50%);
   width: auto;
   margin: 0 auto;
   height: 10px;
   background-color: #98c10f;
-  border-radius: 50%;
+  border-radius: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000;
+  color: white;
   font-size: 0.5rem;
   z-index: 10;
   cursor: pointer;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 @media screen and (max-width: 600px) {

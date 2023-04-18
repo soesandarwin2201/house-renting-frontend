@@ -25,10 +25,12 @@
 }
 
 .nav-menu {
-  width: 100%;
+  width: 110%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid grey;
+  padding-right: 24px;
 }
 
 .logo-container {
@@ -49,13 +51,15 @@
   align-items: center;
   padding: 8px 0 8px 16px;
   list-style: none;
-  height: 30px;
+  height: 35px;
   width: 120%;
 }
 
 .nav-link:hover {
  background-color: #98c10f;
  color: white;
+ font-weight: bold;
+ font-size: 0.9rem;
 }
 
 .nav-link {
@@ -66,7 +70,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 18px;
   border-radius: 4px;
 }
 
