@@ -60,15 +60,11 @@ button {
 
   .reservation-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
   }
 
   .reserve-input {
     display: flex;
-    justify-content: center;
-    gap: 4rem;
     width: 100%;
   }
 }
