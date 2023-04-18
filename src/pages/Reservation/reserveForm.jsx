@@ -28,6 +28,7 @@ const ReserveForm = () => {
         Start Date:
         <input
           type="date"
+          className="reserve-input"
           value={startDate}
           onChange={handleStartDateChange}
           required
@@ -37,6 +38,7 @@ const ReserveForm = () => {
         End Date:
         <input
           type="date"
+          className="reserve-input"
           value={endDate}
           onChange={handleEndDateChange}
           required
