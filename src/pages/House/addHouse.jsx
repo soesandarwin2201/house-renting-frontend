@@ -35,42 +35,42 @@ const AddHouse = () => {
         <input
           type="text"
           name="name"
-          placeholder="house name"
+          placeholder="House Name"
           onChange={inputValue}
           required
         />
         <input
           type="string"
           name="image"
-          placeholder="image"
+          placeholder="Image"
           onChange={inputValue}
           required
         />
         <input
           type="decimal"
           name="price"
-          placeholder="price"
+          placeholder="Price"
           onChange={inputValue}
           required
         />
         <input
           type="text"
           name="location"
-          placeholder="location"
+          placeholder="Location"
           onChange={inputValue}
           required
         />
         <input
           type="text"
           name="description"
-          placeholder="description"
+          placeholder="Description"
           onChange={inputValue}
           required
         />
         <input
           type="integer"
           name="bedroom_number"
-          placeholder="bedroom number"
+          placeholder="Bedroom Number"
           onChange={inputValue}
           required
         />
