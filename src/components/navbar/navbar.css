@@ -1,8 +1,7 @@
 .nav-toggle {
   margin-left: 2rem;
   font-size: 2rem;
-  background: #fff;
-  color: #000;
+  color: white;
 }
 
 .nav-container {
@@ -90,3 +89,4 @@ span {
   text-align: center;
   margin-bottom: 1rem;
 }
+
