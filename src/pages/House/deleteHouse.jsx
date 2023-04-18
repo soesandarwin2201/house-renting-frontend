@@ -34,9 +34,9 @@ const DeleteHouse = () => {
   };
 
   return (
-    <div>
+    <div className="list">
       <h1>House List</h1>
-      <ul>
+      <ul className="house-list">
         {houses.map((house) => (
           <li key={house.id}>
             {house.name}
