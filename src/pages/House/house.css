@@ -46,9 +46,11 @@ button {
 }
 
 .house-list {
-  
-
+  list-style: none;
+  text-decoration: none;
+  margin: 2rem;
 }
+
 @media only screen and (max-width: 800px) {
   input {
     background-color: lightblue;
