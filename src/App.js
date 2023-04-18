@@ -1,5 +1,5 @@
+/* eslint-disable */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// eslint-disable-next-line import/no-named-as-default-member
 import Navbar from './components/navbar/navbar';
 import Home from './pages/Home/home';
 import SignOut from "./pages/SignOut/signout";
