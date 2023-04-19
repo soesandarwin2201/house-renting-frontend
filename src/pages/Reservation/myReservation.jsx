@@ -1,84 +1,33 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { addReservation } from "../../redux/reservation/reservationSlice";
 
-const ReserveHouse = () => {
-  const [house, setHouse] = useState({
-    startDate: "",
-    endDate: "",
-  });
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { fatchReservation } from "../../redux/reservation/reservationSlice"
 
-  const dispatch = useDispatch();
+const MyReservation = () => {
+const reservation = useSelector((state) => state.reservation.reservations)
+const dispatch = useDispatch()
 
-  useEffect(() => {
-    // Fetch API data and update the state of houses
-    const token = localStorage.getItem("token"); // Replace with your actual authentication token
-    fetch("http://localhost:3000/houses", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => setHouse(data));
-  }, []);
-
-  const handleStartDateChange = (event) => {
-    setHouse({
-      ...house,
-      startDate: event.target.value,
-    });
-  };
-
-  const handleEndDateChange = (event) => {
-    setHouse({
-      ...house,
-      endDate: event.target.value,
-    });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // Dispatch the addReservation action with the reservation data
-    dispatch(addReservation(house));
-
-    // Clear the form after submission
-    setHouse({
-      startDate: "",
-      endDate: "",
-    });
-  };
-
+useEffect( () => {
+  dispatch(fatchReservation())
+},[dispatch])
+console.log(reservation)
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Start Date:
-        <input
-          type="date"
-          value={house.startDate}
-          onChange={handleStartDateChange}
-          required
-        />
-      </label>
-      <label>
-        End Date:
-        <input
-          type="date"
-          value={house.endDate}
-          onChange={handleEndDateChange}
-          required
-        />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
-  );
-};
+    <div>
+      <h1>My Reservations</h1>
+      <ul>
+      {reservation.map((house) => (
+            <li key={house.id} className="slide">
+              <h1>House name{house.name}</h1>
+             <p>start date {house.reservation.start_date}</p>
+              <p>End date {house.reservation.end_date}</p>
+              <br/>
+            </li>
+          ))}
+      </ul>
+    </div>
+  )
+}
 
-export default ReserveHouse;
+export default MyReservation
+
+   
