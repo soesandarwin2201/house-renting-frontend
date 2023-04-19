@@ -15,7 +15,7 @@ const ReserveForm = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-      const data =  dispatch(fetchHouses());
+    dispatch(fetchHouses());
   }, [dispatch]);
  
   const inputValue = (e) => {
