@@ -1,4 +1,3 @@
-
 .nav-toggle {
   margin-left: 2rem;
   font-size: 2rem;
@@ -12,7 +11,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: -100%;
   transition: 850ms;
@@ -44,7 +43,7 @@
 
 .logo-name {
   color: #241b1b;
-  font-family: Dr Sugiyama,cursive;
+  font-family: 'Dr Sugiyama', cursive;
   text-align: center;
   text-decoration: underline;
   transform: rotate(-20deg);
