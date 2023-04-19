@@ -10,6 +10,7 @@ import SignUp from "./pages/Signup/signup";
 import Login from "./pages/login/login";
 import ProtectedRoute from "./components/route/protectedroute";
 import HomeReserve from "./pages/House/homeReserved";
+import MyReservation from "./pages/Reservation/myReservation";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/addHouse" element={<AddHouse />} />
           <Route path="/deleteHouse" element={<DeleteHouse />} />
           <Route path="/houses/:id" element={<HouseDetails />} />
+          <Route path="/reservations" element={<MyReservation />} />
           <Route path="/reserveform" element={<ReserveForm />} />
           <Route path="/houses/:id/reservations" element={<HomeReserve />} />
         </Route>

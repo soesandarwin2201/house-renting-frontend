@@ -1,3 +1,4 @@
+
 import React from 'react';
 import * as AiIcon from 'react-icons/ai';
 import * as GiIcon from 'react-icons/gi';
@@ -45,7 +46,7 @@ export const navData = [
   {
     id: 3,
     text: 'Reservation',
-    path: '/reservation',
+    path: '/reservations',
     icon: <AiIcon.AiOutlineFileText />,
     className: 'nav-item',
     linkcss: 'nav-link',

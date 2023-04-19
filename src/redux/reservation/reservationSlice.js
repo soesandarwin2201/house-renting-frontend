@@ -80,7 +80,7 @@ const reservationSlice = createSlice({
       ...state,
       isLoading: false,
       success: true,
-      list: action.payload.data,
+      reservations: action.payload.data,
     }));
 
     builder.addCase(fatchReservation.rejected, (state, action) => ({
