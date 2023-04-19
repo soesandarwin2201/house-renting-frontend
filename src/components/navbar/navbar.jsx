@@ -48,10 +48,14 @@ function Navbar() {
               <span>{item.text}</span>
             </Link>
           </li>
-         
         ))
       }
-
+        <li className='signout-container nav-item'>
+          <button on onClick={() => logout()}>
+            <BiIcon.BiUserCircle />
+            <span>SignOut</span>
+          </button>
+        </li>
           </div>
 
           <div className="social-container">
