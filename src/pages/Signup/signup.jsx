@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { signupUser } from '../../redux/signup/signupSlice';
+import "../House/house.css";
 
 const SignUp = () => {
   const [name, setName] = useState('');

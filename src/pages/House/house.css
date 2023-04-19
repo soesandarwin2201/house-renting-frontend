@@ -11,7 +11,7 @@
   font-weight: 800;
 }
 
-input {
+.form-input {
   width: 100%;
   border: 1px solid black;
   padding: 14px 20px;
@@ -198,7 +198,7 @@ input {
 }
 
 @media only screen and (max-width: 800px) {
-  input {
+  .form-input {
     background-color: lightblue;
     width: 50%;
     margin: auto;
