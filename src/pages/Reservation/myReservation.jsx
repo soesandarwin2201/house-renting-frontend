@@ -1,7 +1,7 @@
-
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { fatchReservation } from "../../redux/reservation/reservationSlice"
+import './reservation.css'
 
 const MyReservation = () => {
 const reservation = useSelector((state) => state.reservation.reservations)
@@ -9,22 +9,27 @@ const dispatch = useDispatch()
 
 useEffect( () => {
   dispatch(fatchReservation())
-},[dispatch])
-console.log(reservation)
+},[dispatch]);
+
   return (
-    <div>
-      <h1>My Reservations</h1>
-      <ul>
+    <section className="reservation-container">
+      <h1 className="reservation-title">My Reservations</h1>
+      <ul className="reservation-card-container">
       {reservation.map((house) => (
-            <li key={house.id} className="slide">
-              <h1>House name{house.name}</h1>
+            <div key={house.id} className="slide">
+              <div className="reservation-img-container">
+              <img src={house.image} alt="house image"  className="reservation-img"/>
+              </div>
+              <div className="reservation-info">
+              <h1 className="reservation-house-name">House name{house.name}</h1>
              <p>start date {house.reservation.start_date}</p>
               <p>End date {house.reservation.end_date}</p>
+              </div>
               <br/>
-            </li>
+            </div>
           ))}
       </ul>
-    </div>
+    </section>
   )
 }
 

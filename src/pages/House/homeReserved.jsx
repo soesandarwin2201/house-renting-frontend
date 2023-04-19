@@ -38,6 +38,7 @@ const HomeReserve = () => {
           name="start_date"
           onChange={inputValue}
           required
+          className="form-input"
         />
       </label>
       <label>
@@ -47,6 +48,7 @@ const HomeReserve = () => {
           name="end_date"
           onChange={inputValue}
           required
+          className="form-input"
         />
       </label>
       <button type="submit" className="submit-btn">Submit</button>
