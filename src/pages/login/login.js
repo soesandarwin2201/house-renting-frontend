@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getAccessToken } from '../../redux/login/loginSlice';
-import './login.css'
+import './login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -20,9 +20,9 @@ const Login = () => {
   };
 
   return (
-    <section className='login-section'>
-      <h1 className='login-title'>REGISTER FORM</h1>
-      <form onSubmit={handleSubmit} className='login-container'>
+    <section className="login-section">
+      <h1 className="login-title">REGISTER FORM</h1>
+      <form onSubmit={handleSubmit} className="login-container">
 
         <input
           type="email"
@@ -40,7 +40,7 @@ const Login = () => {
           placeholder="Password"
           className="input-form"
         />
-        <button type="submit" className='form-button'>Login</button>
+        <button type="submit" className="form-button">Login</button>
       </form>
       <div className="d-flex account">
         <p>No account yet? Click here to Sign Up</p>
