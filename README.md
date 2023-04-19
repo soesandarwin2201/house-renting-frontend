@@ -29,7 +29,7 @@
 
 # 📖 House Renting <a name="about-project"></a>
 
-> GVASH PLANES is a rails application where you can book rental homes. This app is created using `Rails` as an api and `React` as frontend with 5 people.
+> House renting is a rails application where you can book rental homes. This app is created using `Rails` as an api and `React` as frontend with 5 people.
 
 ## 🛠 Project Links
 
