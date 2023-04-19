@@ -1,62 +1,59 @@
-.reservation-container{
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     width: 100%;
+.reservation-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
-.reservation-title{
-     font-size: 2rem;
-     margin-top: 3rem;
-     margin-bottom: 2rem;
+.reservation-title {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
-.reservation-card-container{
-     display: flex;
-     width: 100%;
-     gap: 3rem;
-     flex-wrap: wrap;
+.reservation-card-container {
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
-.slide{
-     display: flex;
-     flex-direction: column;
-     flex-basis: 22%;
-     background-color: #ccc;
-     border-radius: 5px;
-     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.slide {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 22%;
+  background-color: #ccc;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-.reservation-img-container{
-     flex-basis: 50%;
+.reservation-img-container {
+  flex-basis: 50%;
 }
 
-.reservation-img{
-     width: 100%;
+.reservation-img {
+  width: 100%;
 }
 
-.reservation-info{
-     flex-basis: 50%;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     padding: 1rem;
+.reservation-info {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
-.reservation-house-name{
-     font-size: 1rem;
+.reservation-house-name {
+  font-size: 1rem;
 }
-
 
 @media only screen and (max-width: 800px) {
-     .reservation-card-container{
-          flex-direction: column;
-     }
+  .reservation-card-container {
+    flex-direction: column;
+  }
 
-     .slide{
-          flex-basis: 100%;
-     }
-     
-   }
-   
+  .slide {
+    flex-basis: 100%;
+  }
+}
