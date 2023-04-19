@@ -6,12 +6,12 @@ import { fetchHouses } from "../../redux/house/houseSlice";
 import { addReservation } from "../../redux/reservation/reservationSlice";
 
 const ReserveForm = () => {
-  const houses =  useSelector((state) => state.houses.houses)
+  const houses = useSelector((state) => state.houses.houses);
   const [reservation, setReservation] = useState({
     start_date: "",
     end_date: "",
-    house_id: ""
-  })
+    house_id: "",
+  });
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const ReserveForm = () => {
   useEffect(() => {
     dispatch(fetchHouses());
   }, [dispatch]);
- 
+
   const inputValue = (e) => {
     setReservation({
       ...reservation,
@@ -30,9 +30,8 @@ const ReserveForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addReservation(reservation));
-     navigate("/reservations");
+    navigate("/reservations");
   };
-
 
   return (
     <form onSubmit={handleSubmit}>
@@ -43,7 +42,7 @@ const ReserveForm = () => {
           name="start_date"
           onChange={inputValue}
           required
-         
+
         />
       </label>
       <label>
@@ -53,23 +52,21 @@ const ReserveForm = () => {
           name="end_date"
           onChange={inputValue}
           required
-         
+
         />
       </label>
 
-      <label for="cars">Choose a house:</label>
-<select id="cars" name="house_id" onChange={inputValue} form="carform">
-  {
-     houses.map((house) => {
-      return(
-        <option key={house.id} value={house.id}>
-          {house.name}
-        </option>
-      )
-     })
+      <label htmlFor="cars">Choose a house:</label>
+      <select id="cars" name="house_id" onChange={inputValue} form="carform">
+        {
+     houses.map((house) => (
+       <option key={house.id} value={house.id}>
+         {house.name}
+       </option>
+     ))
   }
- 
-</select>
+
+      </select>
 
       <button type="submit">Submit</button>
     </form>
