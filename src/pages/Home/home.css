@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Lato:ital,wght@0,300;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;1,400;1,700&family=Roboto:ital,wght@1,300&display=swap');
 
-
 .home-container {
   display: flex;
   flex-direction: column;
@@ -163,7 +162,6 @@ img:hover {
   background-color: #98c10f;
   border-radius: 40%;
   display: flex;
-  justify-content: center;
   align-items: center;
   color: white;
   font-size: 0.5rem;
@@ -195,9 +193,9 @@ img:hover {
   z-index: 10;
   cursor: pointer;
   padding: 1.5rem;
-  border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0;
   border-bottom-right-radius: 40px;
-  border-top-left-radius: 0px;
+  border-top-left-radius: 0;
   border-top-right-radius: 40px;
   left: 0;
 }
