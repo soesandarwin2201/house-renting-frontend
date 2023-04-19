@@ -42,8 +42,8 @@ const ReserveForm = () => {
           type="date"
           name="start_date"
           onChange={inputValue}
-         
           required
+         
         />
       </label>
       <label>
@@ -52,8 +52,8 @@ const ReserveForm = () => {
           type="date"
           name="end_date"
           onChange={inputValue}
-         
           required
+         
         />
       </label>
 
