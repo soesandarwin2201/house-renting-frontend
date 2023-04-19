@@ -33,7 +33,7 @@ function Navbar() {
         <ul className="nav-menu" onClick={showSideBar}>
           <li className="nav-item logo-container">
             <Link to="/" className="logo">
-              <span className="logo-name">House Renting</span>
+              <span className="logo-name-1">House Renting</span>
             </Link>
             <Link to="#" className="close-bar">
               <AiIcon.AiOutlineClose />
@@ -51,7 +51,7 @@ function Navbar() {
         ))
       }
         <li className='signout-container nav-item'>
-          <button on onClick={() => logout()}>
+          <button on onClick={() => logout()} id="navbar-sub-btn">
             <BiIcon.BiUserCircle />
             <span>SignOut</span>
           </button>

@@ -19,6 +19,7 @@
   left: -100%;
   transition: 850ms;
   padding-right: 1rem;
+  z-index: 10;
 }
 
 .nav-container.active {
@@ -34,7 +35,9 @@
   border: 2px solid grey;
   background-color: white;
   border-top: none;
+  border-bottom: none;
   padding-right: 24px;
+  margin-bottom: -20px;
 }
 
 .logo-container {
@@ -44,9 +47,10 @@
   align-items: center;
 }
 
-.logo-name {
-  color: #241b1b;
+.logo-name-1 {
+  color: black;
   font-family: 'Dr Sugiyama', cursive;
+  font-size: 2rem;
   text-align: center;
   text-decoration: underline;
   transform: rotate(-20deg);
@@ -79,7 +83,7 @@
   background-color: #98c10f;
   color: white;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .close-bar {
@@ -110,4 +114,16 @@ span {
 .copy-right {
   font-size: 0.8rem;
   text-align: center;
+}
+
+#navbar-sub-btn {
+  text-decoration: none;
+  color: #000;
+  background-color: #98c10f;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  border-radius: 4px;
+  font-weight: bold;
 }

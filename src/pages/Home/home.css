@@ -11,6 +11,7 @@
   margin-top: 2rem;
   margin-inline: 3rem;
   margin-bottom: 2rem;
+  z-index: -10;
 }
 
 .home-title-container {
