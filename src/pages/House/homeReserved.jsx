@@ -49,7 +49,7 @@ const HomeReserve = () => {
           required
         />
       </label>
-      <button type="submit" className="submit">Submit</button>
+      <button type="submit" className="submit-btn">Submit</button>
     </form>
   );
 };

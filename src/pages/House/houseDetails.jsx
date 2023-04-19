@@ -61,7 +61,12 @@ function HouseDetails() {
             </button>
           </div>
         </div>
-        <button type="type" className="back" onClick={() => navigate(`/home`)}><AiIcon.AiFillCaretLeft /></button>
+        <button type="button" className="back" onClick={() => navigate(`/home`)}>
+          <AiIcon.AiFillCaretLeft />
+          {' '}
+          back
+          {' '}
+        </button>
       </section>
     </IconContext.Provider>
   );

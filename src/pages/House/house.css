@@ -21,7 +21,7 @@ input {
   cursor: pointer;
 }
 
-.submit {
+.submit-btn {
   width: 100%;
   background-color: #97bf11;
   color: #fff;
@@ -64,6 +64,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+
   /* animation: hiddenH1 1s; */
 }
 
@@ -73,10 +74,9 @@ input {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   transition: 1s ease;
   animation: hiddenH1 2s;
-  transition: 1s ease;
 }
 
 #detail-img:hover {
@@ -118,9 +118,9 @@ input {
   font-weight: 900;
 }
 
-#location{
+#location {
   color: #303030;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -130,34 +130,34 @@ input {
   gap: 1rem;
 }
 
-.border{
+.border {
   list-style: none;
   display: flex;
   gap: 2.5rem;
   background-color: #eee;
   padding: 0.9rem 3.5rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0, rgba(0, 0, 0, 0.06) 0 1px 2px 0;
 }
 
-.detail{
+.detail {
   font-size: 1.2rem;
   font-weight: 800;
   padding: 1rem;
 }
 
-#description{
-  font-size: .9rem;
-  margin-inline: .5rem;
+#description {
+  font-size: 0.9rem;
+  margin-inline: 0.5rem;
   font-weight: 700;
   padding: 1rem;
   letter-spacing: 1px;
 }
 
-#reserver-btn{
-  padding: .9rem 2.5rem;
+#reserver-btn {
+  padding: 0.9rem 2.5rem;
   font-size: 1rem;
   text-transform: uppercase;
   color: #fff;
@@ -178,23 +178,23 @@ input {
   background-color: #303030;
 }
 
-
-#reserve-icon{
-  font-size: .9rem;
+#reserve-icon {
+  font-size: 0.9rem;
   margin-inline: 1rem;
   font-weight: 900;
 }
 
-.back{
-  padding: .5rem 1rem;
+.back {
+  padding: 0.5rem 1rem;
   background-color: #97bf11;
   border: 0;
   outline: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  color: #fff;
 }
 
-.back:hover{
+.back:hover {
   padding-right: 1.5rem;
 }
 
@@ -217,5 +217,4 @@ input {
   #card-container {
     flex-direction: column;
   }
-
 }
