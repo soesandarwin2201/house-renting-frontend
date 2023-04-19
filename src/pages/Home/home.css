@@ -67,6 +67,7 @@
   margin: 0;
 }
 
+
 img {
   width: 250px;
   justify-content: center;
@@ -77,7 +78,7 @@ img {
   transition: 1s ease;
 }
 
-img:hover {
+.house-img:hover {
   -webkit-transform: scale(1.8);
   -ms-transform: scale(1.8);
   transform: scale(1.8);

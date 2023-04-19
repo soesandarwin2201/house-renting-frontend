@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addHouse } from "../../redux/house/houseSlice"; // Import the action to add a house
+import "./house.css";
 
 const AddHouse = () => {
   const [house, setHouse] = useState({
@@ -73,7 +74,9 @@ const AddHouse = () => {
           onChange={inputValue}
           required
         />
-        <button type="submit">Add House</button>
+        <button type="submit" className="submit">
+          Add House
+        </button>
       </form>
     </div>
   );
