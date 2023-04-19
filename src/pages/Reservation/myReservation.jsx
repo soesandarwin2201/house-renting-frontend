@@ -41,5 +41,4 @@ const MyReservation = () => {
     </section>
   );
 };
-
 export default MyReservation;
