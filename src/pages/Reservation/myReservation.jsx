@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from "react-redux"
 import { fatchReservation } from "../../redux/reservation/reservationSlice"
 import './reservation.css'
 
+
 const MyReservation = () => {
-const reservation = useSelector((state) => state.reservation.reservations)
-const dispatch = useDispatch()
+  const reservation = useSelector((state) => state.reservation.reservations);
+  const dispatch = useDispatch();
+
 
 useEffect( () => {
   dispatch(fatchReservation())
@@ -34,5 +36,3 @@ useEffect( () => {
 }
 
 export default MyReservation
-
-   
