@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap');
+
 .nav-toggle {
   margin-left: 2rem;
   font-size: 2rem;
@@ -6,14 +8,15 @@
 
 .nav-container {
   background-color: #fff;
-  width: 180px;
+  width: 250px;
   height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: -100%;
   transition: 850ms;
+  padding-right: 1rem;
 }
 
 .nav-container.active {
@@ -22,10 +25,14 @@
 }
 
 .nav-menu {
-  width: 100%;
+  width: 110%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid grey;
+  background-color: white;
+  border-top: none;
+  padding-right: 24px;
 }
 
 .logo-container {
@@ -36,8 +43,11 @@
 }
 
 .logo-name {
-  font-size: 3rem;
-  font-style: italic;
+  color: #241b1b;
+  font-family: 'Dr Sugiyama', cursive;
+  text-align: center;
+  text-decoration: underline;
+  transform: rotate(-20deg);
 }
 
 .nav-item {
@@ -46,23 +56,28 @@
   align-items: center;
   padding: 8px 0 8px 16px;
   list-style: none;
-  height: 30px;
+  height: 35px;
+  width: 120%;
 }
 
 .nav-link {
   text-decoration: none;
   color: #000;
-  font-size: 1rem;
+  font-size: 1.3rem;
   width: 95%;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 10px 16px;
+  padding: 15px 18px;
   border-radius: 4px;
+  font-weight: bold;
 }
 
 .nav-link:hover {
-  background-color: #1a83ff;
+  background-color: #98c10f;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .close-bar {
@@ -80,12 +95,17 @@ span {
 
 .social-container {
   display: flex;
-  gap: 0.3rem;
-  flex-wrap: wrap;
+  gap: 0.1rem;
+  padding-left: 0.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.social-container li:hover {
+  transform: rotate(45deg);
 }
 
 .copy-right {
   font-size: 0.8rem;
   text-align: center;
-  margin-bottom: 1rem;
 }

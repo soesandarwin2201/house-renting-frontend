@@ -66,12 +66,12 @@
   margin: 0;
 }
 
-.house-img {
-  width: 200px;
+img {
+  width: 250px;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  height: 200px;
+  height: 250px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset, rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
   transition: 1s ease;
 }
@@ -93,7 +93,7 @@
 
 .house-name {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #040406;
 }
@@ -136,7 +136,7 @@
 }
 
 .swiper-container {
-  width: 100%;
+  width: 82%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -152,24 +152,52 @@
   align-items: center;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-button-next {
   position: absolute;
-  top: 10%;
+  top: 78%;
   transform: translateY(-50%);
   width: auto;
   margin: 0 auto;
   height: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
+  background-color: #98c10f;
+  border-radius: 40%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: #000;
+  color: white;
   font-size: 0.5rem;
   z-index: 10;
   cursor: pointer;
-  padding: 1rem;
+  padding: 1.5rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 0;
+  justify-content: flex-start;
+  right: 0;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 76%;
+  transform: translateX(332%);
+  width: auto;
+  margin: 0 auto;
+  height: 10px;
+  background-color: #98c10f;
+  border-radius: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.5rem;
+  z-index: 10;
+  cursor: pointer;
+  padding: 1.5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 40px;
+  left: 0;
 }
 
 @media screen and (max-width: 600px) {

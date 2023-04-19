@@ -33,7 +33,7 @@ function Navbar() {
         <ul className="nav-menu" onClick={showSideBar}>
           <li className="nav-item logo-container">
             <Link to="/" className="logo">
-              <span className="logo-name">Logo</span>
+              <span className="logo-name">House Renting</span>
             </Link>
             <Link to="#" className="close-bar">
               <AiIcon.AiOutlineClose />
@@ -48,15 +48,14 @@ function Navbar() {
               <span>{item.text}</span>
             </Link>
           </li>
-         
         ))
       }
-       <li className="signout-container nav-item">
-    <button onClick={() => logout()}>
-    <BiIcon.BiUserCircle />
-     <span>SignOut</span> 
-    </button>
-  </li>
+        <li className='signout-container nav-item'>
+          <button on onClick={() => logout()}>
+            <BiIcon.BiUserCircle />
+            <span>SignOut</span>
+          </button>
+        </li>
           </div>
 
           <div className="social-container">
@@ -80,7 +79,6 @@ function Navbar() {
                 <FaIcon.FaMedium />
               </Link>
             </li>
-            <p className="copy-right">2023 & fullstack group project</p>
           </div>
         </ul>
 
@@ -138,7 +136,6 @@ function Navbar() {
                 <FaIcon.FaMedium />
               </Link>
             </li>
-            <p className="copy-right">2023 & fullstack group project</p>
           </div>
         </ul>
 
