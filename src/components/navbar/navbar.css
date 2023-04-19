@@ -58,13 +58,6 @@
   width: 120%;
 }
 
-.nav-link:hover {
- background-color: #98c10f;
- color: white;
- font-weight: bold;
- font-size: 1.1rem;
-}
-
 .nav-link {
   text-decoration: none;
   color: #000;
@@ -76,6 +69,13 @@
   padding: 15px 18px;
   border-radius: 4px;
   font-weight: bold;
+}
+
+.nav-link:hover {
+  background-color: #98c10f;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .close-bar {
