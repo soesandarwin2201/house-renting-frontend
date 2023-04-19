@@ -213,4 +213,9 @@ input {
   .reserve-input {
     width: 100%;
   }
+
+  #card-container {
+    flex-direction: column;
+  }
+
 }
