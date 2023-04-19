@@ -16,7 +16,6 @@ const ReserveForm = () => {
 
   useEffect(() => {
       const data =  dispatch(fetchHouses());
-      console.log(data)
   }, [dispatch]);
  
   const inputValue = (e) => {
@@ -28,7 +27,6 @@ const ReserveForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(reservation)
     dispatch(addReservation(reservation));
      navigate("/reservations");
   };
