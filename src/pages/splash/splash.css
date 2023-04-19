@@ -1,15 +1,3 @@
-body {
-  width: 100%;
-  background-image: url(../../../public/Home.jpg);
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 #root {
   height: 100vh;
 }
@@ -20,7 +8,17 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background-image: url(../../../public/Home.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: -10;
 }
 
 .logo {
