@@ -13,7 +13,8 @@ const ReserveForm = () => {
     house_id: ""
   })
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchHouses());
