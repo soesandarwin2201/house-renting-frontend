@@ -3,22 +3,26 @@
   font-size: 1rem;
   font-weight: 900;
   margin-bottom: 2rem;
+  color: white;
 }
 
 .login-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(/src/image/banner.webp);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 7rem;
+  height: 100vh;
 }
 
 .login-container {
-  margin: auto;
   width: 28%;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px #888;
-  margin-bottom: 2rem;
 }
 
 .input-form {

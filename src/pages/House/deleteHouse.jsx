@@ -40,7 +40,10 @@ const DeleteHouse = () => {
         {houses.map((house) => (
           <li key={house.id} className="delete-house-list">
             <img src={house.image} alt="house img" className="deleted-img" />
-            <p className="delete-house-name"> {house.name}</p>
+            <p className="delete-house-name">
+              {' '}
+              {house.name}
+            </p>
             <button type="button" onClick={() => handleDelete(house.id)} className="delete-btn">
               Delete
             </button>

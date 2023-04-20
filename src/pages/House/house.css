@@ -53,42 +53,42 @@
   gap: 1rem;
 }
 
-.delete-house-list{
+.delete-house-list {
   display: flex;
   gap: 1rem;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background-color: #ccc;
   padding: 1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  transition: .4s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+  transition: 0.4s ease;
 }
 
 .delete-house-list:hover {
   transform: translateY(8px);
 }
 
-.deleted-img{
+.deleted-img {
   width: 120px;
   height: 120px;
 }
 
-.delete-house-name{
+.delete-house-name {
   font-size: 1rem;
   color: #fff;
   text-transform: capitalize;
   font-weight: 900;
 }
 
-.delete-btn{
+.delete-btn {
   border: 0;
   outline: 0;
-  padding: .5rem .9rem;
+  padding: 0.5rem 0.9rem;
   font-size: 1rem;
   border-radius: 5px;
   background-color: #97bf11;
   color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
 }
 
 .delete-btn:hover {
@@ -244,7 +244,7 @@
   padding-right: 1.5rem;
 }
 
-.add-form{
+.add-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -255,8 +255,8 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0, rgba(0, 0, 0, 0.06) 0 1px 2px 0;
 }
 
-.add-input{
-  padding: .9rem 1.5rem;
+.add-input {
+  padding: 0.9rem 1.5rem;
   border: 0;
   outline: 0;
   border-radius: 5px;
@@ -283,7 +283,7 @@
     flex-direction: column;
   }
 
-  .add-form{
+  .add-form {
     width: 90%;
   }
 }

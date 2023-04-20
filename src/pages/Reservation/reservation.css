@@ -48,7 +48,7 @@
   font-size: 1rem;
 }
 
-.reservation-form-container{
+.reservation-form-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -57,13 +57,13 @@
   gap: 1rem;
 }
 
-.reservation-form-title{
+.reservation-form-title {
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
 }
 
-.reservation-form{
+.reservation-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,38 +73,38 @@
   margin-bottom: 1rem;
 }
 
-.reserved-item{
+.reserved-item {
   display: flex;
   gap: 1rem;
   padding: 1.2rem 2rem;
   align-items: center;
   background-color: #ccc;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
   border-radius: 5px;
 }
 
-.select-house{
+.select-house {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 1.2rem 1.9rem;
   background-color: #ccc;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
   border-radius: 5px;
 }
 
-.form-label{
+.form-label {
   font-size: 1rem;
   font-weight: 700;
   text-transform: capitalize;
 }
 
-.date-input{
+.date-input {
   border: none;
   padding: 1rem 2rem;
 }
 
-.reserverd-btn{
+.reserverd-btn {
   padding: 0.9rem 2.5rem;
   font-size: 1rem;
   text-transform: uppercase;

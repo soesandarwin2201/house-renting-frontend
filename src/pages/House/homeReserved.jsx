@@ -1,13 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useNavigate, useParams } from "react-router";
 import { addReservedHouse } from "../../redux/reservation/reservationSlice";
 
 const HomeReserve = () => {
-  const error = useSelector((state) => state.reservation.error);
-  console.log(error);
   const { id } = useParams();
   const [reservation, setReservation] = useState({
     start_date: "",
@@ -16,7 +14,6 @@ const HomeReserve = () => {
   });
 
   const inputValue = (e) => {
-    console.log(e.target.value);
     setReservation({
       ...reservation,
       [e.target.name]: e.target.value,
@@ -29,34 +26,40 @@ const HomeReserve = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addReservedHouse(reservation));
-    console.log('it is not showing');
     navigate("/reservations");
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Start Date:
-        <input
-          type="date"
-          name="start_date"
-          onChange={inputValue}
-          required
-          className="form-input"
-        />
-      </label>
-      <label>
-        End Date:
-        <input
-          type="date"
-          name="end_date"
-          onChange={inputValue}
-          required
-          className="form-input"
-        />
-      </label>
-      <button type="submit" className="submit-btn">Submit</button>
-    </form>
+    <section className="reservation-form-container">
+      <h1 className="reservation-form-title">Reservation Form</h1>
+      <form onSubmit={handleSubmit} className="reservation-form">
+        <div className="reserved-item">
+          <label className="form-label">
+            Start Date:
+          </label>
+          <input
+            type="date"
+            name="start_date"
+            onChange={inputValue}
+            required
+            className="form-input"
+          />
+        </div>
+        <div className="reserved-item">
+          <label className="form-label">
+            End Date:
+          </label>
+          <input
+            type="date"
+            name="end_date"
+            onChange={inputValue}
+            required
+            className="form-input"
+          />
+        </div>
+        <button type="submit" className="reserverd-btn">Submit</button>
+      </form>
+    </section>
   );
 };
 

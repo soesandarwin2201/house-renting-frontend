@@ -23,27 +23,27 @@ const SignUp = () => {
     <section className="login-section">
       <h1 className="login-title">SignUp</h1>
       <form onSubmit={handleSubmit} className="login-container">
-      <input
-            type="text"
-            name="name"
-            placeholder="Username"
-            className="input-form"
-            onChange={(e) => setName(e.target.value)}
-          />
         <input
-            type="email"
-            name="email"
-            placeholder="Write your email"
-            className="input-form"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-            className="input-form"
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          type="text"
+          name="name"
+          placeholder="Username"
+          className="input-form"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Write your email"
+          className="input-form"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          className="input-form"
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <button type="button" className="form-button" onClick={handleSubmit}>
           SignUp
         </button>

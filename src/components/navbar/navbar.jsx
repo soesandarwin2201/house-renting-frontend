@@ -84,7 +84,7 @@ function Navbar() {
 
       </nav>
     </IconContext.Provider>) : (
-      <IconContext.Provider value={{ color: '#000' }}>
+      <IconContext.Provider value={{ color: '#fff' }}>
       <div className="navbar">
         <Link to="#" className="nav-toggle">
           <FaIcon.FaBars onClick={showSideBar} />
