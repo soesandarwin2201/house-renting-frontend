@@ -8,9 +8,6 @@ const SignUp = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const user = useSelector((state) => state.user.user);
-console.log("how are you");
-console.log(user)
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

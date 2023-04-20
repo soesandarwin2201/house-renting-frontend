@@ -70,6 +70,6 @@ const HouseDetails = () => {
       </section>
     </IconContext.Provider>
   );
-}
+};
 
 export default HouseDetails;

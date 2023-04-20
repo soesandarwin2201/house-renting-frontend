@@ -30,7 +30,12 @@ const ReserveForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!reservation.house_id) {
-      alert("Please select a house");
+      const errorMessage = document.getElementById('span');
+      errorMessage.innerHTML = "Please select a house";
+      errorMessage.style.color = "red";
+      setTimeout(() => {
+        errorMessage.innerHTML = " ";
+      }, "2000");
       return;
     }
     dispatch(addReservation(reservation));
@@ -65,6 +70,7 @@ const ReserveForm = () => {
             className="date-input"
           />
         </div>
+        <span id="span" />
         <div className="select-house">
           <label htmlFor="reserved" className="form-label">Choose a house:</label>
           <select id="houses" name="house_id" onChange={inputValue} form="reserverdform" className="date-input">
