@@ -151,7 +151,7 @@
 
 .swiper-button-next {
   position: absolute;
-  top: 78%;
+  top: 79%;
   transform: translateY(-50%);
   width: auto;
   margin: 0 auto;
@@ -170,7 +170,7 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 0;
   justify-content: flex-start;
-  right: 10rem;
+  right: 5rem;
 }
 
 .swiper-button-prev {
@@ -194,7 +194,7 @@
   border-bottom-right-radius: 40px;
   border-top-left-radius: 0;
   border-top-right-radius: 40px;
-  left: -5rem;
+  left: -10rem;
 }
 
 @media screen and (max-width: 700px) {

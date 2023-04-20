@@ -30,29 +30,36 @@ const HomeReserve = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Start Date:
-        <input
-          type="date"
-          name="start_date"
-          onChange={inputValue}
-          required
-          className="form-input"
-        />
-      </label>
-      <label>
-        End Date:
-        <input
-          type="date"
-          name="end_date"
-          onChange={inputValue}
-          required
-          className="form-input"
-        />
-      </label>
-      <button type="submit" className="submit-btn">Submit</button>
-    </form>
+    <section className="reservation-form-container">
+      <h1 className="reservation-form-title">Reservation Form</h1>
+      <form onSubmit={handleSubmit} className="reservation-form">
+        <div className="reserved-item">
+          <label className="form-label">
+            Start Date:
+          </label>
+          <input
+            type="date"
+            name="start_date"
+            onChange={inputValue}
+            required
+            className="form-input"
+          />
+        </div>
+        <div className="reserved-item">
+          <label className="form-label">
+            End Date:
+          </label>
+          <input
+            type="date"
+            name="end_date"
+            onChange={inputValue}
+            required
+            className="form-input"
+          />
+        </div>
+        <button type="submit" className="reserverd-btn">Submit</button>
+      </form>
+    </section>
   );
 };
 

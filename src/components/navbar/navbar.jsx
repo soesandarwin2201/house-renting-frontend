@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <>
     {
-      status || success ? (<IconContext.Provider value={{ color: '#000',  size: '1.5em' }} >
+      status || success ? (<IconContext.Provider value={{ color: '#000' }}>
       <div className="navbar">
         <Link to="#" className="nav-toggle">
           <FaIcon.FaBars onClick={showSideBar} />
@@ -33,7 +33,7 @@ function Navbar() {
         <ul className="nav-menu" onClick={showSideBar}>
           <li className="nav-item logo-container">
             <Link to="/" className="logo">
-              <span className="logo-name">House Renting</span>
+              <span className="logo-name-1">House Renting</span>
             </Link>
             <Link to="#" className="close-bar">
               <AiIcon.AiOutlineClose />
@@ -51,7 +51,7 @@ function Navbar() {
         ))
       }
         <li className='signout-container nav-item'>
-          <button on onClick={() => logout()}>
+          <button on onClick={() => logout()} id="navbar-sub-btn">
             <BiIcon.BiUserCircle />
             <span>SignOut</span>
           </button>
@@ -84,7 +84,7 @@ function Navbar() {
 
       </nav>
     </IconContext.Provider>) : (
-      <IconContext.Provider value={{ color: 'white',  size: '1.5em' }}>
+      <IconContext.Provider value={{ color: '#fff' }}>
       <div className="navbar">
         <Link to="#" className="nav-toggle">
           <FaIcon.FaBars onClick={showSideBar} />
@@ -94,10 +94,10 @@ function Navbar() {
         <ul className="nav-menu" onClick={showSideBar}>
           <li className="nav-item logo-container">
             <Link to="/" className="logo">
-              <span className="logo-name">Logo</span>
+              <span className="logo-name-1">House Renting</span>
             </Link>
             <Link to="#" className="close-bar">
-              <AiIcon.AiOutlineClose color='black' />
+              <AiIcon.AiOutlineClose />
             </Link>
           </li>
           <div className="menu">
@@ -106,7 +106,7 @@ function Navbar() {
           <li className={item.className} key={item.id}>
             <Link to={item.path} className={item.linkcss}>
               {item.icon}
-              <span className='link-name'>{item.text}</span>
+              <span>{item.text}</span>
             </Link>
           </li>
         ))
@@ -118,22 +118,22 @@ function Navbar() {
           <div className="social-container">
             <li className="nav-item">
               <Link to="https://wellfound.com/u/soe-sandar-win" className="social link">
-                <FaIcon.FaAngellist color='black' />
+                <FaIcon.FaAngellist />
               </Link>
             </li>
             <li className="nav-item">
               <Link to="https://www.linkedin.com/in/soe-sandar-win-softwareengineer/" className="social link">
-                <FaIcon.FaLinkedin color='black' />
+                <FaIcon.FaLinkedin />
               </Link>
             </li>
             <li className="nav-item">
               <Link to="https://github.com/soesandarwin2201" className="social link">
-                <FaIcon.FaGithub color='black' />
+                <FaIcon.FaGithub />
               </Link>
             </li>
             <li className="nav-item">
               <Link to="https://medium.com/@soesandarwin2201" className="social link">
-                <FaIcon.FaMedium color='black' />
+                <FaIcon.FaMedium />
               </Link>
             </li>
           </div>

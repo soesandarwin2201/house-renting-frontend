@@ -114,7 +114,7 @@ Clone this repository to your desired folder(`Rails`):
 Clone Another repository for frontend(`React`). [Project](https://github.com/soesandarwin2201/house-renting-frontend)
 
 ```sh
- git clone https://https://github.com/soesandarwin2201/house-renting-backend
+ git clone https://https://github.com/soesandarwin2201/house-renting-frontend
 ```
 
 ### Install
@@ -131,7 +131,8 @@ Install Rails Project with:
 ```
 
 ```sh
-  rails db:setup
+  rails db:create
+  rails db:seed
   rails s
 ```
 
@@ -160,14 +161,6 @@ email: user@example.com
 password: password
 ```
 
-
-### Run tests
-
-To run tests, run the following command:
-
-```
-rspec spec --format documentation
-```
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -216,7 +209,7 @@ rspec spec --format documentation
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/soesandarwin2201/house-renting-frontend/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

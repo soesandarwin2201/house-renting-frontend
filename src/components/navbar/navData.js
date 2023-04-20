@@ -66,12 +66,4 @@ export const navData = [
     className: 'nav-item',
     linkcss: 'nav-link',
   },
-  {
-    id: 6,
-    text: 'SignOut',
-    path: '/signout',
-    icon: <BiIcon.BiUserCircle />,
-    className: 'nav-item',
-    linkcss: 'nav-link',
-  },
 ];

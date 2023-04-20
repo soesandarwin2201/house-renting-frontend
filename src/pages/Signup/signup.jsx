@@ -21,8 +21,8 @@ const SignUp = () => {
 
   return (
     <section className="login-section">
-      <h1 className="login-title">REGISTER FORM</h1>
-      <form className="login-container">
+      <h1 className="login-title">SignUp</h1>
+      <form onSubmit={handleSubmit} className="login-container">
         <input
           type="text"
           name="name"
@@ -30,7 +30,6 @@ const SignUp = () => {
           className="input-form"
           onChange={(e) => setName(e.target.value)}
         />
-
         <input
           type="email"
           name="email"
@@ -38,7 +37,6 @@ const SignUp = () => {
           className="input-form"
           onChange={(e) => setEmail(e.target.value)}
         />
-
         <input
           type="password"
           name="password"
@@ -46,7 +44,6 @@ const SignUp = () => {
           className="input-form"
           onChange={(e) => setPassword(e.target.value)}
         />
-
         <button type="button" className="form-button" onClick={handleSubmit}>
           SignUp
         </button>

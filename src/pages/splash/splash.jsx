@@ -8,11 +8,12 @@ const Splash = () => (
     <div className="searchIcon">
       <FaSearch />
     </div>
-    <div className="hero-container">
+    <li className="nav-item hero-container ">
       <Link to="/" className="logo">
         <span className="hero-name">House Renting Services</span>
       </Link>
-    </div>
+      <p className="splash-info">Find your dream house</p>
+    </li>
   </section>
 );
 
