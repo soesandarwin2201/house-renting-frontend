@@ -21,25 +21,40 @@
   z-index: -10;
 }
 
-.splash-logo-container{
+.hero-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
   text-decoration: none;
-}
-
-.splash-name {
-  padding-top: 3rem;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 900;
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .splash-info{
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  animation: 1.5s fadeInUp;
 }
 
 .nav-toggle {
@@ -70,26 +85,39 @@
   color: white;
 }
 
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 1080px) {
-  .logo-name {
-    font-size: 3rem;
+  .hero-name {
+    font-size: 5rem;
   }
 }
 
 @media only screen and (max-width: 897px) {
-  .logo-name {
-    font-size: 2rem;
+  .hero-name {
+    font-size: 4rem;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  .logo-name {
+  .hero-name {
     letter-spacing: 6px;
+    font-size: 3rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .logo-name {
+  .hero-name {
     letter-spacing: 3px;
   }
 }

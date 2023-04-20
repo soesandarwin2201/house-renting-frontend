@@ -23,7 +23,6 @@ const SignUp = () => {
     <section className="login-section">
       <h1 className="login-title">SignUp</h1>
       <form onSubmit={handleSubmit} className="login-container">
-
       <input
             type="text"
             name="name"
@@ -49,6 +48,12 @@ const SignUp = () => {
           SignUp
         </button>
       </form>
+      <div className="d-flex account">
+        <p className="login-para">Have an account already? Login </p>
+        <button type="button" className="signup-btn" onClick={() => navigate('/login')}>
+          Login
+        </button>
+      </div>
     </section>
   );
 };

@@ -94,7 +94,7 @@ function Navbar() {
         <ul className="nav-menu" onClick={showSideBar}>
           <li className="nav-item logo-container">
             <Link to="/" className="logo">
-              <span className="logo-name">Logo</span>
+              <span className="logo-name-1">House Renting</span>
             </Link>
             <Link to="#" className="close-bar">
               <AiIcon.AiOutlineClose />
