@@ -10,8 +10,8 @@
 
 .nav-container {
   background-color: #fff;
-  width: 250px;
-  height: 100vh;
+  width: 250px; 
+  height: 100%;
   display: flex;
   justify-content: center;
   position: absolute;
@@ -32,12 +32,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid grey;
+  border: 1px solid grey;
   background-color: white;
   border-top: none;
   border-bottom: none;
   padding-right: 24px;
   margin-bottom: -20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .logo-container {
@@ -120,10 +121,13 @@ span {
   text-decoration: none;
   color: #000;
   background-color: #98c10f;
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  padding: 20px 15px;
+  padding: .9rem 1.4rem;
   border-radius: 4px;
+  border: 0;
+  outline: 0;
   font-weight: bold;
+  margin-top: 2rem;
 }
