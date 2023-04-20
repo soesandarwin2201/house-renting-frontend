@@ -8,9 +8,9 @@ const Splash = () => (
     <div className="searchIcon">
       <FaSearch />
     </div>
-    <li className="nav-item logo-container">
+    <li className="nav-item splash-logo-container">
       <Link to="/" className="logo">
-        <span className="logo-name">House Renting Services</span>
+        <span className="splash-name">House Renting Services</span>
       </Link>
         <p className="splash-info">Find your dream house</p>
     </li>

@@ -21,7 +21,7 @@
   z-index: -10;
 }
 
-.logo-container{
+.splash-logo-container{
   display: flex;
   flex-direction: column;
 }
@@ -30,7 +30,7 @@
   text-decoration: none;
 }
 
-.logo-name {
+.splash-name {
   padding-top: 3rem;
   color: #fff;
   font-size: 2rem;

@@ -244,6 +244,25 @@
   padding-right: 1.5rem;
 }
 
+.add-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #ccc;
+  padding: 1rem;
+  width: 28%;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0, rgba(0, 0, 0, 0.06) 0 1px 2px 0;
+}
+
+.add-input{
+  padding: .9rem 1.5rem;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
 @media only screen and (max-width: 800px) {
   .form-input {
     background-color: lightblue;
@@ -262,5 +281,9 @@
 
   #card-container {
     flex-direction: column;
+  }
+
+  .add-form{
+    width: 90%;
   }
 }

@@ -31,13 +31,14 @@ const AddHouse = () => {
   return (
     <div className="form-container">
       <h3 className="add-book-title">ADD NEW HOUSE</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="add-form">
         <input
           type="text"
           name="name"
           placeholder="house name"
           onChange={inputValue}
           required
+          className="add-input"
         />
         <input
           type="string"
@@ -45,6 +46,7 @@ const AddHouse = () => {
           placeholder="image"
           onChange={inputValue}
           required
+          className="add-input"
         />
         <input
           type="decimal"
@@ -52,6 +54,7 @@ const AddHouse = () => {
           placeholder="price"
           onChange={inputValue}
           required
+          className="add-input"
         />
         <input
           type="text"
@@ -59,6 +62,7 @@ const AddHouse = () => {
           placeholder="location"
           onChange={inputValue}
           required
+          className="add-input"
         />
         <input
           type="text"
@@ -66,6 +70,7 @@ const AddHouse = () => {
           placeholder="description"
           onChange={inputValue}
           required
+          className="add-input"
         />
         <input
           type="integer"
@@ -73,8 +78,9 @@ const AddHouse = () => {
           placeholder="bedroom number"
           onChange={inputValue}
           required
+          className="add-input"
         />
-        <button type="submit" className="submit">
+        <button type="submit" className="form-button">
           Add House
         </button>
       </form>
