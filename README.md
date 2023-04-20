@@ -100,7 +100,10 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 ```sh
- gem install
+ In order to run this project you need:
+
+- Command line or terminal with React installed.
+- IDE such as VsCode.
 ```
 
 ### Setup
