@@ -1,24 +1,34 @@
 .login-title {
   text-align: center;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 900;
   margin-bottom: 2rem;
+  color: white;
 }
 
 .login-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 7rem 2rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../../../public/Home.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
 }
 
 .login-container {
-  margin: auto;
-  width: 25%;
+  width: 100%;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px #888;
   margin-bottom: 2rem;
+  max-width: 500px;
 }
 
 .input-form {
@@ -30,6 +40,10 @@
   border-bottom: 2px solid black;
   border-radius: 4px;
   outline: none;
+}
+
+.login-para{
+  color: #fff;
 }
 
 .form-button {

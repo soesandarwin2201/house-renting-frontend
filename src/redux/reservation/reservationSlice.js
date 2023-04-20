@@ -49,7 +49,7 @@ export const addReservedHouse = createAsyncThunk(ADD_HOUSE_RESERVED,
       },
     };
     try {
-      const response = await axios.post(`${GETHOUSES}/${id}/reservations`, reservation, requestOptions);
+      const response = await axios.post(`${GETHOUSES}/${id}/reservations/add`, reservation, requestOptions);
       return response;
     } catch (e) {
       return thunkApi.rejectWithValue(e.response.data.error);

@@ -20,40 +20,43 @@ const SignUp = () => {
   };
 
   return (
-    <section className="form-container">
-      <h1 className="form-header">SignUp</h1>
-      <form className="signup-form">
-        <div className="form-item">
+    <section className="login-section">
+      <h1 className="login-title">REGISTER FORM</h1>
+      <form className="login-container">
           <input
             type="text"
             name="name"
             placeholder="Username"
-            className="form-input"
+            className="input-form"
             onChange={(e) => setName(e.target.value)}
           />
-        </div>
-        <div className="form-item">
+
           <input
             type="email"
             name="email"
             placeholder="Write your email"
-            className="form-input"
+            className="input-form"
             onChange={(e) => setEmail(e.target.value)}
           />
-        </div>
-        <div className="form-item">
+     
           <input
             type="password"
             name="password"
             placeholder="Enter your password"
-            className="form-input"
+            className="input-form"
             onChange={(e) => setPassword(e.target.value)}
           />
-        </div>
-        <button type="button" className="signup-btn" onClick={handleSubmit}>
+        
+        <button type="button" className="form-button" onClick={handleSubmit}>
           SignUp
         </button>
       </form>
+      <div className="d-flex account">
+        <p className='login-para'>Have an account already? Login </p>
+        <button type="button" className="signup-btn" onClick={() => navigate('/login')}>
+          Login
+        </button>
+      </div>
     </section>
   );
 };
