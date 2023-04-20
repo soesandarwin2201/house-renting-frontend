@@ -12,6 +12,7 @@ const Splash = () => (
       <Link to="/" className="logo">
         <span className="logo-name">House Renting Services</span>
       </Link>
+        <p className="splash-info">Find your dream house</p>
     </li>
   </section>
 );
