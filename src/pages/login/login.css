@@ -14,7 +14,7 @@
 
 .login-container {
   margin: auto;
-  width: 25%;
+  width: 28%;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px #888;
@@ -59,4 +59,10 @@
   border: 0;
   border-radius: 5px;
   box-shadow: 0 9px #999;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-container {
+    width: 90%;
+  }
 }

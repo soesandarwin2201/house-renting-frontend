@@ -37,7 +37,7 @@ const ReserveForm = () => {
     <section className="reservation-form-container">
       <h1 className="reservation-form-title">Reservation Form</h1>
       <form onSubmit={handleSubmit} className="reservation-form">
-      <div className="form-item">
+      <div className="reserved-item">
       <label className="form-label">
         Start Date:
         </label>
@@ -49,7 +49,7 @@ const ReserveForm = () => {
           className="date-input"
         />
       </div>
-      <div className="form-item">
+      <div className="reserved-item">
       <label className="form-label">
         End Date:
         </label>
