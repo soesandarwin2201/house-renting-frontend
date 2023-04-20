@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <>
     {
-      status || success ? (<IconContext.Provider value={{ color: '#000' }}>
+      status || success ? (<IconContext.Provider value={{ color: '#000',  size: '1.5em' }} >
       <div className="navbar">
         <Link to="#" className="nav-toggle">
           <FaIcon.FaBars onClick={showSideBar} />
@@ -84,7 +84,7 @@ function Navbar() {
 
       </nav>
     </IconContext.Provider>) : (
-      <IconContext.Provider value={{ color: '#000' }}>
+      <IconContext.Provider value={{ color: 'white',  size: '1.5em' }}>
       <div className="navbar">
         <Link to="#" className="nav-toggle">
           <FaIcon.FaBars onClick={showSideBar} />
@@ -97,7 +97,7 @@ function Navbar() {
               <span className="logo-name">Logo</span>
             </Link>
             <Link to="#" className="close-bar">
-              <AiIcon.AiOutlineClose />
+              <AiIcon.AiOutlineClose color='black' />
             </Link>
           </li>
           <div className="menu">
@@ -106,7 +106,7 @@ function Navbar() {
           <li className={item.className} key={item.id}>
             <Link to={item.path} className={item.linkcss}>
               {item.icon}
-              <span>{item.text}</span>
+              <span className='link-name'>{item.text}</span>
             </Link>
           </li>
         ))
@@ -118,22 +118,22 @@ function Navbar() {
           <div className="social-container">
             <li className="nav-item">
               <Link to="https://wellfound.com/u/soe-sandar-win" className="social link">
-                <FaIcon.FaAngellist />
+                <FaIcon.FaAngellist color='black' />
               </Link>
             </li>
             <li className="nav-item">
               <Link to="https://www.linkedin.com/in/soe-sandar-win-softwareengineer/" className="social link">
-                <FaIcon.FaLinkedin />
+                <FaIcon.FaLinkedin color='black' />
               </Link>
             </li>
             <li className="nav-item">
               <Link to="https://github.com/soesandarwin2201" className="social link">
-                <FaIcon.FaGithub />
+                <FaIcon.FaGithub color='black' />
               </Link>
             </li>
             <li className="nav-item">
               <Link to="https://medium.com/@soesandarwin2201" className="social link">
-                <FaIcon.FaMedium />
+                <FaIcon.FaMedium color='black' />
               </Link>
             </li>
           </div>
