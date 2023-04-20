@@ -152,16 +152,6 @@ For the React project,
    npm start
 ```
 
-### Authentication
-
- If you wanna login as admin, you have to use the following credientials, please make sure to run above commands
-
-```sh
-email: user@example.com
-password: password
-```
-
-
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Robert**
