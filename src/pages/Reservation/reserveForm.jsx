@@ -34,30 +34,36 @@ const ReserveForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <section className="reservation-form-container">
+      <h1 className="reservation-form-title">Reservation Form</h1>
+      <form onSubmit={handleSubmit} className="reservation-form">
+      <div className="form-item">
+      <label className="form-label">
         Start Date:
+        </label>
         <input
           type="date"
           name="start_date"
           onChange={inputValue}
           required
-
+          className="date-input"
         />
-      </label>
-      <label>
+      </div>
+      <div className="form-item">
+      <label className="form-label">
         End Date:
+        </label>
         <input
           type="date"
           name="end_date"
           onChange={inputValue}
           required
-
+          className="date-input"
         />
-      </label>
-
-      <label htmlFor="cars">Choose a house:</label>
-      <select id="cars" name="house_id" onChange={inputValue} form="carform">
+      </div>
+      <div className="select-house">
+      <label htmlFor="reserved" className="form-label">Choose a house:</label>
+      <select id="houses" name="house_id" onChange={inputValue} form="reserverdform" className="date-input">
         {
      houses.map((house) => (
        <option key={house.id} value={house.id}>
@@ -65,11 +71,12 @@ const ReserveForm = () => {
        </option>
      ))
   }
-
       </select>
+      </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit" className="reserverd-btn">Submit</button>
     </form>
+    </section>
   );
 };
 
