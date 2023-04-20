@@ -120,6 +120,10 @@
   .hero-name {
     letter-spacing: 3px;
   }
+
+  .nav-toggle {
+    margin-left: 0.4rem;
+}
 }
 
 @media only screen and (max-width: 486px) {

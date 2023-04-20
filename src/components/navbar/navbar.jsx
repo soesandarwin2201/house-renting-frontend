@@ -9,7 +9,7 @@ import { navData , unAuthenticate} from './navData';
 import * as BiIcon from 'react-icons/bi';
 import './navbar.css';
 
-function Navbar() {
+const Navbar = () => {
   const status = useSelector((state) => state.signup.token);
   const success = useSelector((state) => state.login.token)
   const [sidebar, SetSidebar] = useState(false);

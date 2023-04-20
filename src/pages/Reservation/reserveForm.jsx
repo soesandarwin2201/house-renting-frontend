@@ -29,6 +29,10 @@ const ReserveForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!reservation.house_id) {
+      alert("Please select a house");
+      return;
+    }
     dispatch(addReservation(reservation));
     navigate("/reservations");
   };

@@ -8,7 +8,7 @@ import * as AiIcon from 'react-icons/ai';
 import { showHouse } from "../../redux/house/houseSlice";
 import "./house.css";
 
-function HouseDetails() {
+const HouseDetails = () => {
   const { id } = useParams();
   const { house } = useSelector((state) => state.house);
   const dispatch = useDispatch();

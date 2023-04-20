@@ -12,7 +12,7 @@ import ProtectedRoute from "./components/route/protectedroute";
 import HomeReserve from "./pages/House/homeReserved";
 import MyReservation from "./pages/Reservation/myReservation";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Navbar />
