@@ -43,7 +43,7 @@ const Login = () => {
         <button type="submit" className="form-button">Login</button>
       </form>
       <div className="d-flex account">
-        <p className='login-para'>No account yet? Click here to Sign Up</p>
+        <p className="login-para">No account yet? Click here to Sign Up</p>
         <button type="button" className="signup-btn" onClick={() => navigate('/signup')}>
           Sign Up
         </button>
