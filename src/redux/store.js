@@ -11,7 +11,6 @@ const store = configureStore({
     login: loginSlice,
     signup: signupSlice,
     houses: houseSlice,
-    house: houseSlice,
     reservation: reservationSlice,
   },
   middleware: [logger, thunk],

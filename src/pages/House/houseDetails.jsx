@@ -1,22 +1,20 @@
 import React, { useEffect } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useNavigate, useParams } from "react-router";
-import { useDispatch, useSelector } from "react-redux";
 import { IconContext } from 'react-icons';
 import * as FcIcon from 'react-icons/fc';
 import * as AiIcon from 'react-icons/ai';
-import { showHouse } from "../../redux/house/houseSlice";
+import { useLocation } from 'react-router-dom';
 import "./house.css";
 
 const HouseDetails = () => {
   const { id } = useParams();
-  const { house } = useSelector((state) => state.house);
-  const dispatch = useDispatch();
+  const location = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    dispatch(showHouse(id));
-  }, [dispatch, id]);
+
+const house = location.state.house
+
   return (
     <IconContext.Provider value={{ color: '#fff' }}>
       <section id="detail-container">
