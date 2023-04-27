@@ -1,0 +1,72 @@
+.login-title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(/src/image/banner.webp);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 7rem;
+  height: 100vh;
+}
+
+.login-container {
+  width: 28%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #888;
+}
+
+.input-form {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-button {
+  background-color: #97bf11; /* Green */
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.signup-btn {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #97bf11;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 9px #999;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-container {
+    width: 90%;
+  }
+}

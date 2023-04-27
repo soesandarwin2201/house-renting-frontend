@@ -1,0 +1,135 @@
+#root {
+  height: 100vh;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #98fb98), url(/src/image/banner.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: -10;
+}
+
+.hero-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  text-decoration: none;
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-info {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  animation: 1.5s fadeInUp;
+}
+
+.nav-toggle {
+  color: white;
+  background: none;
+}
+
+.navbar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.searchIcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: fixed;
+  right: 30px;
+  top: 2rem;
+  font-size: 40px;
+  color: white;
+  width: 100%;
+}
+
+.FaIcon .FaBars {
+  color: white;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .hero-name {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 897px) {
+  .hero-name {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .hero-name {
+    letter-spacing: 6px;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-name {
+    letter-spacing: 3px;
+  }
+
+  .nav-toggle {
+    margin-left: 0.4rem;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .logo-name {
+    font-weight: 900;
+    letter-spacing: 6px;
+    font-size: 1rem;
+  }
+}
