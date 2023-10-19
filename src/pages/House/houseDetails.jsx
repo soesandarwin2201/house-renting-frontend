@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useNavigate, useParams } from "react-router";
 import { IconContext } from 'react-icons';
@@ -11,9 +11,7 @@ const HouseDetails = () => {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-
-
-const house = location.state.house
+  const { house } = location.state;
 
   return (
     <IconContext.Provider value={{ color: '#fff' }}>
