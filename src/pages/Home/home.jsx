@@ -63,7 +63,7 @@ const Home = () => {
       </div>
       <div className="swiper-container">
         <div className="swiper-wrapper">
-          {houses.map((house) => (
+          {houses.filter((houser) => houser.id).map((house) => (
             <div key={house.id} className="swiper-slide">
               <HouseCard {...house} />
             </div>
